@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"regexp"
 	"strconv"
@@ -37,11 +38,15 @@ type ApiResponse struct {
 	CloseDate              string `json:"CloseDate"`
 }
 
+var curriculum_ID string
+
 func main() {
-	studentID := "620612093"
+	studentID := "640612093"
 	studentFaculty := "Computer Engineering"
 	output := transformInput(studentID)
+	fmt.Printf("Student ID : %s \n" , studentID)
 	fmt.Printf("Student curriculum year : %s \n" , output)
+	fmt.Printf("Student Faculty : %s \n" , studentFaculty)
 	apiURL := fmt.Sprintf("https://mis-api.cmu.ac.th/tqf/v1/tqf2/copy-to-ebulletin/ebulletin-public?studentlevelid=2&facultyid=06&academicYear=%s&acdemicterm=1", output)
 
     resp, err := http.Get(apiURL)
@@ -71,10 +76,19 @@ func main() {
 			FID = apiResponse.TQF2CopyToEbulletinID
 		}
 	}
+	curriculum_ID = "https://mis.cmu.ac.th/TQF/TQF2/CurriculumPublic.aspx?EID=" + FID
+	
+	courses, err := scraping(curriculum_ID)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	fmt.Printf("https://mis.cmu.ac.th/TQF/TQF2/CurriculumPublic.aspx?EID=%s \n",FID)
+	// Print the result
+	for _, course := range courses {
+		fmt.Printf("Course ID: %s\nCourse Code: %s\nCourse Short Code: %s\nCourse Title: %s\n\n",
+			course.ID, course.CourseCode, course.CourseShortCode, course.CourseTitle)
+	}
 }
-
 
 func transformInput(input string) string {
 	// Define a regular expression pattern to extract the first two digits.
