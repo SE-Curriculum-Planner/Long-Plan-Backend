@@ -13,7 +13,8 @@ type Course struct {
 	CourseCode         string
 	CourseShortCode    string
 	CourseTitle		   string
-	CourseType 		   string 
+	Credit             string
+	CourseType 		   string
 }
 
 func scraping(curriculum_ID string) ([]Course, error) {
@@ -32,13 +33,15 @@ func scraping(curriculum_ID string) ([]Course, error) {
 		return nil, err
 	}
 
-	// Extract information using dynamic IDs
-	document.Find("div[id^='GVCurriculumList_ctl'][id$='_DvCourse']").Each(func(index int, divHtml *goquery.Selection) {
-		// Extract course details within the div
-		courseID := strings.TrimSpace(divHtml.Find("[id$='_lblCourseID']").Text())
-		courseCode := strings.TrimSpace(divHtml.Find("[id$='_lblCourseCode']").Text())
-		courseShortCode := strings.TrimSpace(divHtml.Find("[id$='_lblCourseShort']").Text())
-		courseTitle := strings.TrimSpace(divHtml.Find("[id$='_lblCourseTitle']").Text())
+	// Extract information within tbody > tr
+	document.Find("div[id^='GVCurriculumList_ctl'][id$='_DvCourse']").Each(func(index int, trHtml *goquery.Selection) {
+		// Extract course details within the tr
+		courseID := strings.TrimSpace(trHtml.Find("[id$='_lblCourseID']").Text())
+		courseCode := strings.TrimSpace(trHtml.Find("[id$='_lblCourseCode']").Text())
+		courseShortCode := strings.TrimSpace(trHtml.Find("[id$='_lblCourseShort']").Text())
+		courseTitle := strings.TrimSpace(trHtml.Find("[id$='_lblCourseTitle']").Text())
+		courseType := strings.TrimSpace(trHtml.Find("[id$='_lblCurriculumMainStructureName']").Text())
+		courseCredit := strings.TrimSpace(trHtml.Find("[id$='_lblCreditShow']").Text())
 
 		// Append the course to the courses slice
 		courses = append(courses, Course{
@@ -46,8 +49,11 @@ func scraping(curriculum_ID string) ([]Course, error) {
 			CourseCode:      courseCode,
 			CourseShortCode: courseShortCode,
 			CourseTitle:     courseTitle,
+			CourseType:      courseType,	
+			Credit:          courseCredit,
 		})
 	})
+
 	return courses, nil
 }
 

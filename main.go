@@ -41,6 +41,34 @@ type ApiResponse struct {
 var curriculum_ID string
 
 func main() {
+	getCPE("2563")
+	// getCourses()  // old method 
+}
+
+func transformInput(input string) string {
+	// Define a regular expression pattern to extract the first two digits.
+	re := regexp.MustCompile(`^(\d{2})`)
+
+	// Find the first two digits in the input.
+	matches := re.FindStringSubmatch(input)
+
+	if len(matches) != 2 {
+		// If the pattern is not found, return an error or handle the case accordingly.
+		return "Invalid input"
+	}
+
+	// Extract the first two digits and concatenate with "25".
+	firstTwoDigits := matches[1]
+	result :=  "25" + firstTwoDigits
+
+	// Convert the result to an integer and then back to a string to remove leading zeros.
+	resultInt, _ := strconv.Atoi(result)
+	result = strconv.Itoa(resultInt)
+
+	return result
+}
+
+func getCourses() {
 	studentID := "640612093"
 	studentFaculty := "Computer Engineering"
 	output := transformInput(studentID)
@@ -85,30 +113,7 @@ func main() {
 
 	// Print the result
 	for _, course := range courses {
-		fmt.Printf("Course ID: %s\nCourse Code: %s\nCourse Short Code: %s\nCourse Title: %s\n\n",
-			course.ID, course.CourseCode, course.CourseShortCode, course.CourseTitle)
+		fmt.Printf("Course ID: %s\nCourse Code: %s\nCourse Short Code: %s\nCourse Title: %s\nCourse Type : %s\n Credit : %s\n",
+			course.ID, course.CourseCode, course.CourseShortCode, course.CourseTitle , course.CourseType , course.Credit)
 	}
-}
-
-func transformInput(input string) string {
-	// Define a regular expression pattern to extract the first two digits.
-	re := regexp.MustCompile(`^(\d{2})`)
-
-	// Find the first two digits in the input.
-	matches := re.FindStringSubmatch(input)
-
-	if len(matches) != 2 {
-		// If the pattern is not found, return an error or handle the case accordingly.
-		return "Invalid input"
-	}
-
-	// Extract the first two digits and concatenate with "25".
-	firstTwoDigits := matches[1]
-	result :=  "25" + firstTwoDigits
-
-	// Convert the result to an integer and then back to a string to remove leading zeros.
-	resultInt, _ := strconv.Atoi(result)
-	result = strconv.Itoa(resultInt)
-
-	return result
 }
