@@ -16,3 +16,6 @@
 - go mod tidy (to install)
 - go init (initialized folder)
 - go run . (run main)
+
+##### References :
+- https://github.com/lasthope1/curriculum-project
