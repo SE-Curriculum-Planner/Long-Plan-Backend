@@ -1,0 +1,1193 @@
+{
+ "ok": true,
+ "curriculum": {
+  "curriculumProgram": "CPE",
+  "year": 2563,
+  "isCOOPPlan": false,
+  "requiredCredits": 139,
+  "freeElectiveCredits": 6,
+  "coreAndMajorGroups": [
+   {
+    "requiredCredits": 33,
+    "groupName": "Core",
+    "requiredCourses": [
+     {
+      "courseNo": "206161",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "206162",
+      "recommendSemester": 2,
+      "recommendYear": 1,
+      "prerequisites": [
+       "206161"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "206261",
+      "recommendSemester": 1,
+      "recommendYear": 2,
+      "prerequisites": [
+       "206162"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "207105",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "207106",
+      "recommendSemester": 2,
+      "recommendYear": 1,
+      "prerequisites": [
+       "207105"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "207115",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "207116",
+      "recommendSemester": 2,
+      "recommendYear": 1,
+      "prerequisites": [
+       "207115"
+      ],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "252281",
+      "recommendSemester": 2,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "259104",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "259106",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "261208",
+      "recommendSemester": 2,
+      "recommendYear": 2,
+      "prerequisites": [
+       "206261"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261216",
+      "recommendSemester": 1,
+      "recommendYear": 2,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261306",
+      "recommendSemester": 2,
+      "recommendYear": 3,
+      "prerequisites": [
+       "206261"
+      ],
+      "corequisite": null,
+      "credits": 3
+     }
+    ],
+    "electiveCourses": []
+   },
+   {
+    "requiredCredits": 52,
+    "groupName": "Major Required",
+    "requiredCourses": [
+     {
+      "courseNo": "261102",
+      "recommendSemester": 2,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261103",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261200",
+      "recommendSemester": 2,
+      "recommendYear": 2,
+      "prerequisites": [
+       "261102"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261207",
+      "recommendSemester": 1,
+      "recommendYear": 2,
+      "prerequisites": [
+       "261103"
+      ],
+      "corequisite": null,
+      "credits": 2
+     },
+     {
+      "courseNo": "261210",
+      "recommendSemester": 1,
+      "recommendYear": 2,
+      "prerequisites": [
+       "207106"
+      ],
+      "corequisite": "261212",
+      "credits": 3
+     },
+     {
+      "courseNo": "261212",
+      "recommendSemester": 1,
+      "recommendYear": 2,
+      "prerequisites": [],
+      "corequisite": "261210",
+      "credits": 1
+     },
+     {
+      "courseNo": "261214",
+      "recommendSemester": 2,
+      "recommendYear": 2,
+      "prerequisites": [
+       "261210",
+       "252281"
+      ],
+      "corequisite": "261215",
+      "credits": 3
+     },
+     {
+      "courseNo": "261215",
+      "recommendSemester": 2,
+      "recommendYear": 2,
+      "prerequisites": [],
+      "corequisite": "261214",
+      "credits": 1
+     },
+     {
+      "courseNo": "261217",
+      "recommendSemester": 1,
+      "recommendYear": 2,
+      "prerequisites": [
+       "261102"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261218",
+      "recommendSemester": 2,
+      "recommendYear": 2,
+      "prerequisites": [
+       "261217",
+       "261216"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261304",
+      "recommendSemester": 1,
+      "recommendYear": 3,
+      "prerequisites": [
+       "261214"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261305",
+      "recommendSemester": 2,
+      "recommendYear": 3,
+      "prerequisites": [
+       "261304"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261332",
+      "recommendSemester": 2,
+      "recommendYear": 2,
+      "prerequisites": [
+       "207106"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261335",
+      "recommendSemester": 1,
+      "recommendYear": 3,
+      "prerequisites": [
+       "261332"
+      ],
+      "corequisite": "261336",
+      "credits": 3
+     },
+     {
+      "courseNo": "261336",
+      "recommendSemester": 1,
+      "recommendYear": 3,
+      "prerequisites": [],
+      "corequisite": "261335",
+      "credits": 1
+     },
+     {
+      "courseNo": "261342",
+      "recommendSemester": 1,
+      "recommendYear": 3,
+      "prerequisites": [
+       "261218"
+      ],
+      "corequisite": "261343",
+      "credits": 3
+     },
+     {
+      "courseNo": "261343",
+      "recommendSemester": 1,
+      "recommendYear": 3,
+      "prerequisites": [],
+      "corequisite": "261342",
+      "credits": 1
+     },
+     {
+      "courseNo": "261361",
+      "recommendSemester": 2,
+      "recommendYear": 3,
+      "prerequisites": [
+       "261200"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261405",
+      "recommendSemester": 2,
+      "recommendYear": 4,
+      "prerequisites": [
+       "261361"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261491",
+      "recommendSemester": 1,
+      "recommendYear": 4,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "261492",
+      "recommendSemester": 2,
+      "recommendYear": 4,
+      "prerequisites": [
+       "261491"
+      ],
+      "corequisite": null,
+      "credits": 3
+     }
+    ],
+    "electiveCourses": []
+   },
+   {
+    "requiredCredits": 18,
+    "groupName": "Major Elective",
+    "requiredCourses": [],
+    "electiveCourses": [
+     {
+      "courseNo": "261400",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261404",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 2
+     },
+     {
+      "courseNo": "261406",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261407",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261408",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261409",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261411",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261414",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261421",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261424",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261430",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261433",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261434",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261435",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261437",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261438",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261439",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261441",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261444",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261446",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261447",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261448",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261449",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261453",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261456",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261457",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261458",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261459",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261461",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261465",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261468",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261469",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261470",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261471",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261472",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261473",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261475",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261476",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261478",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261479",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261493",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261494",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261495",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 6
+     },
+     {
+      "courseNo": "261497",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261498",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261499",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269421",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269430",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269431",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269432",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269433",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269441",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269461",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "269462",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     }
+    ]
+   }
+  ],
+  "geGroups": [
+   {
+    "requiredCredits": 15,
+    "groupName": "Learner Person",
+    "requiredCourses": [
+     {
+      "courseNo": "001101",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "001102",
+      "recommendSemester": 2,
+      "recommendYear": 1,
+      "prerequisites": [
+       "001101"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "001201",
+      "recommendSemester": 1,
+      "recommendYear": 2,
+      "prerequisites": [
+       "001102"
+      ],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "001225",
+      "recommendSemester": 2,
+      "recommendYear": 2,
+      "prerequisites": [
+       "001102"
+      ],
+      "corequisite": null,
+      "credits": 3
+     }
+    ],
+    "electiveCourses": [
+     {
+      "courseNo": "204100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "261111",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "953111",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     }
+    ]
+   },
+   {
+    "requiredCredits": 4,
+    "groupName": "Co-Creator",
+    "requiredCourses": [
+     {
+      "courseNo": "259192",
+      "recommendSemester": 2,
+      "recommendYear": 4,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     }
+    ],
+    "electiveCourses": [
+     {
+      "courseNo": "013110",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "050106",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "176100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "201114",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "201117",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "201190",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "207109",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "207110",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "368100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "602201",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "610111",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "703103",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "751100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "851103",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "852100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     }
+    ]
+   },
+   {
+    "requiredCredits": 4,
+    "groupName": "Active Citizen",
+    "requiredCourses": [
+     {
+      "courseNo": "140104",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "259191",
+      "recommendSemester": 1,
+      "recommendYear": 1,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     }
+    ],
+    "electiveCourses": []
+   },
+   {
+    "requiredCredits": 7,
+    "groupName": "Elective",
+    "requiredCourses": [],
+    "electiveCourses": [
+     {
+      "courseNo": "011100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "109114",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "127100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "128100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "154104",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "201100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "203100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "211100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "254182",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "256131",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "259108",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "259193",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "259194",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "259195",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "462130",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "571116",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "602102",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "701181",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "702101",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "705191",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 1
+     },
+     {
+      "courseNo": "801100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     },
+     {
+      "courseNo": "951100",
+      "recommendSemester": null,
+      "recommendYear": null,
+      "prerequisites": [],
+      "corequisite": null,
+      "credits": 3
+     }
+    ]
+   }
+  ]
+ }
+}

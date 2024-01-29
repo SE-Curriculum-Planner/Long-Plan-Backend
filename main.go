@@ -1,15 +1,16 @@
 package main
 
-import (
-	"github.com/gofiber/fiber/v2"
-)
+import "fmt"
 
 func main() {
-	app := fiber.New()
+	getAllCurriculumYear("CPE")
+	getAllCurriculumYear("ISNE")
+	// getCourses() // old method
+}
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
-	})
-
-	app.Listen(":3000")
+func getAllCurriculumYear(major string) {
+	for i := 58; i <= 67; i++ {
+		year := fmt.Sprintf("25%d",i)
+		getCPEAPI(year,major)
+	}
 }
