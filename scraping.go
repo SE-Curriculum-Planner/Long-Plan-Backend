@@ -8,7 +8,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-type Course struct {
+type scrapCourse struct {
 	ID                 string
 	CourseCode         string
 	CourseShortCode    string
@@ -17,8 +17,8 @@ type Course struct {
 	CourseType 		   string
 }
 
-func scraping(curriculum_ID string) ([]Course, error) {
-	var courses []Course
+func scraping(curriculum_ID string) ([]scrapCourse, error) {
+	var courses []scrapCourse
 	fmt.Printf("Start Scarping URL : %v\n", curriculum_ID)
 	// Make the HTTP request
 	response, err := http.Get(curriculum_ID)
@@ -44,7 +44,7 @@ func scraping(curriculum_ID string) ([]Course, error) {
 		courseCredit := strings.TrimSpace(trHtml.Find("[id$='_lblCreditShow']").Text())
 
 		// Append the course to the courses slice
-		courses = append(courses, Course{
+		courses = append(courses, scrapCourse{
 			ID:              courseID,
 			CourseCode:      courseCode,
 			CourseShortCode: courseShortCode,

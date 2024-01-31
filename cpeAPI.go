@@ -10,9 +10,9 @@ import (
 	"os"
 )
 
-func getCPEAPI(year string , major string) {
+func getCPEAPI(year string , major string , coop string) {
 	token := "8382bd52-4a3d-48ea-8f35-9fc7a3239b7f"
-	url := fmt.Sprintf("https://api.cpe.eng.cmu.ac.th/api/v1/curriculum?year=%s&curriculumProgram=%s&isCOOPPlan=false" , year , major)
+	url := fmt.Sprintf("https://api.cpe.eng.cmu.ac.th/api/v1/curriculum?year=%s&curriculumProgram=%s&isCOOPPlan=%s" , year , major , coop)
 
     // Create a Bearer string by appending string access token
     var bearer = "Bearer " + token
@@ -38,22 +38,7 @@ func getCPEAPI(year string , major string) {
         log.Println("Error while reading the response bytes:", err)
     }
 
-    filename := fmt.Sprintf("%s-%s.json", major ,year)
-	// file, err := os.Create(filename)
-	// if err != nil {
-	// 	fmt.Println("Error creating file:", err)
-	// 	return
-	// }
-	// defer file.Close()
-
-	// // Write the original JSON string to the file
-	// _, err = file.WriteString(jsonPrettyPrint(string(body)))
-	// if err != nil {
-	// 	fmt.Println("Error writing JSON to file:", err)
-	// 	return
-	// }
-
-    // Parse the JSON string into a map
+    	
 	var data map[string]interface{}
 	err = json.Unmarshal([]byte(string(body)), &data)
 	if err != nil {
@@ -64,27 +49,24 @@ func getCPEAPI(year string , major string) {
 	// Check if the "ok" field is true
 	okValue, ok := data["ok"].(bool)
 	if !ok || !okValue {
-		fmt.Printf("%s-%s Curriculum is not found!!! \n" , major , year)
+        if(coop == "true") {
+		    fmt.Printf("%s-%s Curriculum COOP-PLAN is not found!!! \n" , major , year)
+        } else {
+            fmt.Printf("%s-%s Curriculum NORMAL-PLAN is not found!!! \n" , major , year)
+        }
 		return
 	}
 
-	// Open a file for writing (create if not exists, truncate if exists)
-	file, err := os.Create(filename)
-	if err != nil {
-		fmt.Println("Error creating file:", err)
-		return
-	}
-	defer file.Close()
+    writeFile(coop,major,year,string(body))
 
-	// Write the original JSON string to the file
-	_, err = file.WriteString(jsonPrettyPrint(string(body)))
-	if err != nil {
-		fmt.Println("Error writing JSON to file:", err)
-		return
-	}
     fmt.Printf("===============================================\n")
-    fmt.Printf("%s-%s is found!!!\n",major,year)
-	fmt.Printf("JSON data exported to %s-%s.json\n",major,year)
+    if coop == "true" {
+        fmt.Printf("%s-%s COOP-PLAN is found!!!\n",major,year)
+	    fmt.Printf("JSON data exported to %s-%s-coop.json\n",major,year)
+    } else {
+        fmt.Printf("%s-%s NORMAL-PLAN is found!!!\n",major,year)
+	    fmt.Printf("JSON data exported to %s-%s-normal.json\n",major,year)
+    }
     fmt.Printf("===============================================\n")
 }
 
@@ -95,4 +77,40 @@ func jsonPrettyPrint(in string) string {
         return in
     }
     return out.String()
+}
+
+func writeFile(coop string , major string , year string , body string) {
+    // Open a file for writing (create if not exists, truncate if exists)
+    if coop == "true" {
+        filename := fmt.Sprintf("%s-%s-coop.json", major ,year)
+	    file, err := os.Create(filename)
+	    if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	    }
+	    defer file.Close()
+
+	    // Write the original JSON string to the file
+	    _, err = file.WriteString(jsonPrettyPrint(string(body)))
+	    if err != nil {
+		fmt.Println("Error writing JSON to file:", err)
+		return
+	    }
+    } else {
+        filename := fmt.Sprintf("%s-%s-normal.json", major ,year)
+	    file, err := os.Create(filename)
+	    if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	    }
+	    defer file.Close()
+
+	    // Write the original JSON string to the file
+	    _, err = file.WriteString(jsonPrettyPrint(string(body)))
+	    if err != nil {
+		fmt.Println("Error writing JSON to file:", err)
+		return
+	    }
+    }
+    
 }
