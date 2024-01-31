@@ -82,23 +82,6 @@ func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {
 	return courses, nil
 }
 
-
-func writeToFile(courses []enrolledCourse, fileName string) {
-	jsonname := fmt.Sprintf(fileName+"-enrolled.json")
-	file, err := os.Create(jsonname)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-
-	encoder := json.NewEncoder(file)
-	encoder.SetIndent("", "  ") 
-	err = encoder.Encode(courses)
-	if err != nil {
-		log.Fatal(err)
-	}
-}
-
 func groupCoursesByYearSemester(courses []enrolledCourse) map[string]map[string][]enrolledCourse {
 	groupedCourses := make(map[string]map[string][]enrolledCourse)
 
@@ -113,7 +96,7 @@ func groupCoursesByYearSemester(courses []enrolledCourse) map[string]map[string]
 }
 
 func writeGroupedToFile(groupedCourses map[string]map[string][]enrolledCourse, fileName string) {
-	jsonname := fmt.Sprintf(fileName+"-grouped-enrolled.json")
+	jsonname := fmt.Sprintf("data/student-courseEnrolled/"+fileName+"-grouped-enrolled.json")
 	file, err := os.Create(jsonname)
 	if err != nil {
 		log.Fatal(err)
@@ -128,4 +111,19 @@ func writeGroupedToFile(groupedCourses map[string]map[string][]enrolledCourse, f
 	}
 }
 
+func writeToFile(courses []enrolledCourse, fileName string) {
+	jsonname := fmt.Sprintf("data/student-courseEnrolled/"+fileName+"-enrolled.json")
+	file, err := os.Create(jsonname)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	encoder := json.NewEncoder(file)
+	encoder.SetIndent("", "  ") 
+	err = encoder.Encode(courses)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
 

@@ -1,0 +1,515 @@
+{
+  "1": {
+    "1": [
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "001101",
+        "Credit": "3.00",
+        "Grade": "B"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "203162",
+        "Credit": "3.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "203167",
+        "Credit": "1.00",
+        "Grade": "B"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "206161",
+        "Credit": "3.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "207105",
+        "Credit": "3.00",
+        "Grade": "B"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "207115",
+        "Credit": "1.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "259104",
+        "Credit": "3.00",
+        "Grade": "C+"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "259106",
+        "Credit": "1.00",
+        "Grade": "B"
+      },
+      {
+        "Year": "1",
+        "Semester": "1",
+        "CourseNumber": "259191",
+        "Credit": "1.00",
+        "Grade": "S"
+      }
+    ],
+    "2": [
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "001102",
+        "Credit": "3.00",
+        "Grade": "C+"
+      },
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "206162",
+        "Credit": "3.00",
+        "Grade": "C+"
+      },
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "207106",
+        "Credit": "3.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "207116",
+        "Credit": "1.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "251100",
+        "Credit": "1.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "259103",
+        "Credit": "3.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "259107",
+        "Credit": "3.00",
+        "Grade": "B"
+      },
+      {
+        "Year": "1",
+        "Semester": "2",
+        "CourseNumber": "751100",
+        "Credit": "3.00",
+        "Grade": "B"
+      }
+    ]
+  },
+  "2": {
+    "1": [
+      {
+        "Year": "2",
+        "Semester": "1",
+        "CourseNumber": "001201",
+        "Credit": "3.00",
+        "Grade": "C+"
+      },
+      {
+        "Year": "2",
+        "Semester": "1",
+        "CourseNumber": "009103",
+        "Credit": "3.00",
+        "Grade": "B"
+      },
+      {
+        "Year": "2",
+        "Semester": "1",
+        "CourseNumber": "205275",
+        "Credit": "3.00",
+        "Grade": "B"
+      },
+      {
+        "Year": "2",
+        "Semester": "1",
+        "CourseNumber": "206100",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "2",
+        "Semester": "1",
+        "CourseNumber": "206261",
+        "Credit": "3.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "2",
+        "Semester": "1",
+        "CourseNumber": "251211",
+        "Credit": "3.00",
+        "Grade": "C+"
+      },
+      {
+        "Year": "2",
+        "Semester": "1",
+        "CourseNumber": "259201",
+        "Credit": "3.00",
+        "Grade": "A"
+      }
+    ],
+    "2": [
+      {
+        "Year": "2",
+        "Semester": "2",
+        "CourseNumber": "001225",
+        "Credit": "3.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "2",
+        "Semester": "2",
+        "CourseNumber": "208263",
+        "Credit": "3.00",
+        "Grade": "C+"
+      },
+      {
+        "Year": "2",
+        "Semester": "2",
+        "CourseNumber": "251213",
+        "Credit": "3.00",
+        "Grade": "C+"
+      },
+      {
+        "Year": "2",
+        "Semester": "2",
+        "CourseNumber": "251216",
+        "Credit": "4.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "2",
+        "Semester": "2",
+        "CourseNumber": "251261",
+        "Credit": "3.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "2",
+        "Semester": "2",
+        "CourseNumber": "251292",
+        "Credit": "3.00",
+        "Grade": "D+"
+      }
+    ]
+  },
+  "3": {
+    "1": [
+      {
+        "Year": "3",
+        "Semester": "1",
+        "CourseNumber": "201114",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "3",
+        "Semester": "1",
+        "CourseNumber": "259108",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "3",
+        "Semester": "1",
+        "CourseNumber": "261103",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "3",
+        "Semester": "1",
+        "CourseNumber": "261111",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "3",
+        "Semester": "1",
+        "CourseNumber": "602102",
+        "Credit": "3.00",
+        "Grade": "A"
+      }
+    ],
+    "2": [
+      {
+        "Year": "3",
+        "Semester": "2",
+        "CourseNumber": "252281",
+        "Credit": "3.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "3",
+        "Semester": "2",
+        "CourseNumber": "261102",
+        "Credit": "3.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "3",
+        "Semester": "2",
+        "CourseNumber": "261208",
+        "Credit": "3.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "3",
+        "Semester": "2",
+        "CourseNumber": "261306",
+        "Credit": "3.00",
+        "Grade": "C+"
+      }
+    ]
+  },
+  "4": {
+    "1": [
+      {
+        "Year": "4",
+        "Semester": "1",
+        "CourseNumber": "261207",
+        "Credit": "2.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "4",
+        "Semester": "1",
+        "CourseNumber": "261210",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "4",
+        "Semester": "1",
+        "CourseNumber": "261212",
+        "Credit": "1.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "4",
+        "Semester": "1",
+        "CourseNumber": "261216",
+        "Credit": "3.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "4",
+        "Semester": "1",
+        "CourseNumber": "261217",
+        "Credit": "3.00",
+        "Grade": "A"
+      }
+    ],
+    "2": [
+      {
+        "Year": "4",
+        "Semester": "2",
+        "CourseNumber": "261200",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "4",
+        "Semester": "2",
+        "CourseNumber": "261214",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "4",
+        "Semester": "2",
+        "CourseNumber": "261215",
+        "Credit": "1.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "4",
+        "Semester": "2",
+        "CourseNumber": "261218",
+        "Credit": "3.00",
+        "Grade": "C"
+      },
+      {
+        "Year": "4",
+        "Semester": "2",
+        "CourseNumber": "261332",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "4",
+        "Semester": "2",
+        "CourseNumber": "261409",
+        "Credit": "3.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "4",
+        "Semester": "2",
+        "CourseNumber": "261453",
+        "Credit": "3.00",
+        "Grade": "W"
+      }
+    ]
+  },
+  "5": {
+    "1": [
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261491",
+        "Credit": "1.00",
+        "Grade": "S"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261459",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261405",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261343",
+        "Credit": "1.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261342",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261336",
+        "Credit": "1.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261335",
+        "Credit": "3.00",
+        "Grade": "A"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "261304",
+        "Credit": "3.00",
+        "Grade": "B+"
+      },
+      {
+        "Year": "5",
+        "Semester": "1",
+        "CourseNumber": "252211",
+        "Credit": "3.00",
+        "Grade": "C+"
+      }
+    ],
+    "2": [
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "261494",
+        "Credit": "3.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "261492",
+        "Credit": "3.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "261458",
+        "Credit": "3.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "261453",
+        "Credit": "3.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "261406",
+        "Credit": "3.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "261361",
+        "Credit": "3.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "261305",
+        "Credit": "3.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "259194",
+        "Credit": "1.00",
+        "Grade": "*"
+      },
+      {
+        "Year": "5",
+        "Semester": "2",
+        "CourseNumber": "259192",
+        "Credit": "1.00",
+        "Grade": "*"
+      }
+    ]
+  }
+}

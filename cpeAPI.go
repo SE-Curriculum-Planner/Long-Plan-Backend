@@ -82,7 +82,7 @@ func jsonPrettyPrint(in string) string {
 func writeFile(coop string , major string , year string , body string) {
     // Open a file for writing (create if not exists, truncate if exists)
     if coop == "true" {
-        filename := fmt.Sprintf("%s-%s-coop.json", major ,year)
+        filename := fmt.Sprintf("data/curriculum/"+"%s-%s-coop.json", major ,year)
 	    file, err := os.Create(filename)
 	    if err != nil {
 		fmt.Println("Error creating file:", err)
