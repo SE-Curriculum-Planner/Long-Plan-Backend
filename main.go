@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 )
 
 type CourseData struct {
@@ -58,7 +59,18 @@ func main() {
 	// fmt.Println("Course count : " , totalMembers)
 	// getCourseTitle(courseNumbersNormal)
 
-	getEnrolledCourse()
+	// Input your student ID here
+	studentID := "650612093"
+
+	
+
+	courses, err := getEnrolledCourses(studentID)
+	if err != nil {
+		log.Fatal(err)
+	}
+	groupedCourses := groupCoursesByYearSemester(courses)
+	writeGroupedToFile(groupedCourses, studentID)
+	writeToFile(courses,studentID)
 
 	// getData("CPE-2563-normal.json")
 	// getAllCurriculumYear("CPE")

@@ -2,7 +2,10 @@ module github.com/SE-Curriculum-Planner/Long-Plan-Backend
 
 go 1.20
 
-require github.com/PuerkitoBio/goquery v1.5.1
+require (
+	github.com/PuerkitoBio/goquery v1.5.1
+	github.com/gocolly/colly v1.2.0
+)
 
 require (
 	github.com/antchfx/htmlquery v1.3.0 // indirect
@@ -21,6 +24,6 @@ require (
 
 require (
 	github.com/andybalholm/cascadia v1.2.0 // indirect
-	github.com/gocolly/colly v1.2.0
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	golang.org/x/net v0.7.0 // indirect
 )
