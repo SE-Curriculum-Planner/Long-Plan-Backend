@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"regexp"
+	"strconv"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -39,7 +40,22 @@ func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {
 			semesterMatches := regexp.MustCompile(`\d+`).FindAllString(row.Text(), -1)
 			if len(semesterMatches) >= 2 {
 				semester = semesterMatches[len(semesterMatches)-2]
-				year = semesterMatches[len(semesterMatches)-1]
+				temp_year := semesterMatches[len(semesterMatches)-1]
+				
+				num_year, nil := strconv.Atoi(temp_year)
+				if err != nil {
+					fmt.Println("Error converting year to int:", err)
+					return
+				}
+				num_studentID, nil := strconv.Atoi(transformInput(studentID))
+				if err != nil {
+					fmt.Println("Error converting student to int:", err)
+					return
+				}
+
+				num_year = num_year - num_studentID + 1    // calculated study year by studentID and academic year
+				year = strconv.Itoa(num_year)
+				
 			}
 		}
 

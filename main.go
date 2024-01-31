@@ -60,7 +60,7 @@ func main() {
 	// getCourseTitle(courseNumbersNormal)
 
 	// Input your student ID here
-	studentID := "650612093"
+	studentID := "640612093"
 
 	
 
