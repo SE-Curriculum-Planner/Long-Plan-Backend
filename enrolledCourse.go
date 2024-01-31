@@ -5,17 +5,18 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"regexp"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
 type enrolledCourse struct {
-	Year         int    `json:"Year"`
-	Semester     int    `json:"Semester"`
-	CourseNumber string `json:"CourseNumber"`
-	Credit       string `json:"Credit"`
-	Grade        string `json:"Grade"`
+	Year         string    	`json:"Year"`
+	Semester     string    	`json:"Semester"`
+	CourseNumber string 	`json:"CourseNumber"`
+	Credit       string 	`json:"Credit"`
+	Grade        string 	`json:"Grade"`
 }
 
 func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {
@@ -26,12 +27,24 @@ func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {
 	}
 
 	var courses []enrolledCourse
-	year, semester := 1, 1
+	var year , semester string
 
 	// Find and process each block representing courses for a year and semester
-	doc.Find("table[cellspacing='1'][cellpadding='3'][width='60%'][border='0'][class='t']").Each(func(i int, s *goquery.Selection) {
+	doc.Find("table[width='100%'][border='0'][class='t']").Each(func(i int, s *goquery.Selection) {
 		// Process each row in the table
-		s.Find("tr[bgcolor='#FFFFFF']").Each(func(j int, row *goquery.Selection) {
+		s.Find("td[align='center'] > B").Each(func(j int, row *goquery.Selection) {
+			// Check if the text contains Thai characters for semester and year
+		if strings.Contains(row.Text(), "ภาคเรียนที่") && strings.Contains(row.Text(), "ปีการศึกษา") {
+			// Extract semester and year from the text
+			semesterMatches := regexp.MustCompile(`\d+`).FindAllString(row.Text(), -1)
+			if len(semesterMatches) >= 2 {
+				semester = semesterMatches[len(semesterMatches)-2]
+				year = semesterMatches[len(semesterMatches)-1]
+			}
+		}
+
+		})
+		s.Find("table[cellspacing='1'][cellpadding='3'][width='60%'][border='0'][class='t'] tr[bgcolor='#FFFFFF']").Each(func(j int, row *goquery.Selection) {
 			// Extract course details from each row
 			courseNumber := strings.TrimSpace(row.Find("td:first-child").Text())
 			credit := strings.TrimSpace(row.Find("td:nth-child(2)").Text())
@@ -47,29 +60,12 @@ func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {
 			})
 		})
 
-		// Increment semester and year appropriately
-		semester++
-		if semester > 2 {
-			semester = 1
-			year++
-		}
+	
 	})
 
 	return courses, nil
 }
 
-func groupCoursesByYearSemester(courses []enrolledCourse) map[int]map[int][]enrolledCourse {
-	groupedCourses := make(map[int]map[int][]enrolledCourse)
-
-	for _, course := range courses {
-		if _, ok := groupedCourses[course.Year]; !ok {
-			groupedCourses[course.Year] = make(map[int][]enrolledCourse)
-		}
-		groupedCourses[course.Year][course.Semester] = append(groupedCourses[course.Year][course.Semester], course)
-	}
-
-	return groupedCourses
-}
 
 func writeToFile(courses []enrolledCourse, fileName string) {
 	jsonname := fmt.Sprintf(fileName+"-enrolled.json")
@@ -80,14 +76,27 @@ func writeToFile(courses []enrolledCourse, fileName string) {
 	defer file.Close()
 
 	encoder := json.NewEncoder(file)
-	encoder.SetIndent("", "  ") // Set indentation for a pretty format
+	encoder.SetIndent("", "  ") 
 	err = encoder.Encode(courses)
 	if err != nil {
 		log.Fatal(err)
 	}
 }
 
-func writeGroupedToFile(groupedCourses map[int]map[int][]enrolledCourse, fileName string) {
+func groupCoursesByYearSemester(courses []enrolledCourse) map[string]map[string][]enrolledCourse {
+	groupedCourses := make(map[string]map[string][]enrolledCourse)
+
+	for _, course := range courses {
+		if _, ok := groupedCourses[course.Year]; !ok {
+			groupedCourses[course.Year] = make(map[string][]enrolledCourse)
+		}
+		groupedCourses[course.Year][course.Semester] = append(groupedCourses[course.Year][course.Semester], course)
+	}
+
+	return groupedCourses
+}
+
+func writeGroupedToFile(groupedCourses map[string]map[string][]enrolledCourse, fileName string) {
 	jsonname := fmt.Sprintf(fileName+"-grouped-enrolled.json")
 	file, err := os.Create(jsonname)
 	if err != nil {
@@ -102,3 +111,5 @@ func writeGroupedToFile(groupedCourses map[int]map[int][]enrolledCourse, fileNam
 		log.Fatal(err)
 	}
 }
+
+
