@@ -97,7 +97,7 @@ func writeFile(coop string , major string , year string , body string) {
 		return
 	    }
     } else {
-        filename := fmt.Sprintf("%s-%s-normal.json", major ,year)
+        filename := fmt.Sprintf("data/curriculum/"+"%s-%s-normal.json", major ,year)
 	    file, err := os.Create(filename)
 	    if err != nil {
 		fmt.Println("Error creating file:", err)

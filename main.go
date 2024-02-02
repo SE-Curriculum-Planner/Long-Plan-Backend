@@ -6,11 +6,9 @@ import (
 )
 
 func main() {
-	// getCPEAPI("2563" , "CPE" , "true")
-	// getCPEAPI("2563" , "CPE" , "false")
 	
-	// mapCPEcourseToCMUapi()
-	getEnrolledCourseByStudentID("640612093")
+	fetchCPEcurriculumAndMap()
+
 	// getAllCurriculumYear("CPE")
 	// getAllCurriculumYear("ISNE")
 
@@ -25,12 +23,13 @@ func getAllCurriculumYear(major string) {
 	}
 }
 
-func mapCPEcourseToCMUapi() {
-	responseNormal := getData("data/curriculum/CPE-2563-normal.json")
-	courseNumbersNormal := getCourseNumbersFromCurriculum(responseNormal.Curriculum)
+
+func mapCPEcourseToCMUapi(path string) {
+	responseNormal := getDataCurriculum(path)
+	courseNumbersNormal := getCourseNumbersFromCurriculum(responseNormal)
 	totalMembers := len(courseNumbersNormal)
 	fmt.Println("Course count : " , totalMembers)
-	getCourseTitle(courseNumbersNormal)
+	getCourseTitle(courseNumbersNormal , &responseNormal , path)
 }
 
 func getEnrolledCourseByStudentID(id string) {
@@ -44,4 +43,13 @@ func getEnrolledCourseByStudentID(id string) {
 	groupedCourses := groupCoursesByYearSemester(courses)
 	writeGroupedToFile(groupedCourses, studentID)
 	// writeToFile(courses,studentID)
+}
+
+func fetchCPEcurriculumAndMap() {
+	getAllCurriculumYear("CPE")
+	normal := "data/curriculum/CPE-2563-normal.json"
+	coop := "data/curriculum/CPE-2563-coop.json"
+	
+	mapCPEcourseToCMUapi(normal)
+	mapCPEcourseToCMUapi(coop)
 }

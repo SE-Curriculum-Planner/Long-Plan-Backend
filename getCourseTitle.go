@@ -8,15 +8,16 @@ import (
 )
 
 type CourseData struct {
-	CourseNo       string  `json:"courseNo"`
-	CourseTitleEng string  `json:"CourseTitleEng"`
-	Abbreviation   string  `json:"Abbreviation"`
+	CourseNo       string `json:"courseNo"`
+	CourseTitleEng string `json:"CourseTitleEng"`
+	Abbreviation   string `json:"Abbreviation"`
 }
 
 type Course struct {
-	CourseNo           string   `json:"courseNo"`
-	RecommendSemester  int      `json:"recommendSemester"`
-	RecommendYear      int      `json:"recommendYear"`
+	CourseNo           string `json:"courseNo"`
+	CourseTitleEng     string `json:"courseTitleEng"` // Add this line
+	RecommendSemester  int    `json:"recommendSemester"`
+	RecommendYear      int    `json:"recommendYear"`
 	Prerequisites      []string `json:"prerequisites"`
 	Corequisite        *string  `json:"corequisite"`
 	Credits            int      `json:"credits"`
@@ -37,13 +38,13 @@ type GeGroup struct {
 }
 
 type Curriculum struct {
-	CurriculumProgram string         `json:"curriculumProgram"`
-	Year              int            `json:"year"`
-	IsCOOPPlan        bool           `json:"isCOOPPlan"`
-	RequiredCredits   int            `json:"requiredCredits"`
-	FreeElectiveCredits int          `json:"freeElectiveCredits"`
-	CoreAndMajorGroups []CourseGroup  `json:"coreAndMajorGroups"`
-	GeGroups           []GeGroup      `json:"geGroups"`
+	CurriculumProgram  string        `json:"curriculumProgram"`
+	Year               int           `json:"year"`
+	IsCOOPPlan         bool          `json:"isCOOPPlan"`
+	RequiredCredits    int           `json:"requiredCredits"`
+	FreeElectiveCredits int           `json:"freeElectiveCredits"`
+	CoreAndMajorGroups []CourseGroup `json:"coreAndMajorGroups"`
+	GeGroups           []GeGroup     `json:"geGroups"`
 }
 
 type Response struct {
@@ -51,7 +52,8 @@ type Response struct {
 	Curriculum Curriculum `json:"curriculum"`
 }
 
-func getData(path string) Response{
+
+func getDataCurriculum(path string) Curriculum {
 	jsonFilePath := path
 
 	// Read the JSON file
@@ -66,7 +68,7 @@ func getData(path string) Response{
 		fmt.Println("Error Unmarshal:", err)
 	}
 
-	return response	
+	return response.Curriculum
 }
 
 func getCourseNumbersFromCurriculum(curriculum Curriculum) []string {
@@ -95,7 +97,7 @@ func getCourseNumbersFromCourses(courses []Course) []string {
 	return courseNumbers
 }
 
-func getCourseTitle(courseNumbers []string) {
+func getCourseTitle(courseNumbers []string, curriculum *Curriculum , path string) {
 	for _, courseNo := range courseNumbers {
 		courseTitles, err := getCourseTitlesFromAPI(courseNo)
 		if err != nil {
@@ -104,14 +106,58 @@ func getCourseTitle(courseNumbers []string) {
 		}
 
 		for _, courseTitle := range courseTitles {
-			// Construct the API URL using courseNo and courseTitle
-
+	
 			// Now, you can use the 'apiURL' as needed.
 			fmt.Printf("Course Number: %s, Course Title: %s\n", courseNo, courseTitle)
+			// Update the curriculum with the course title
+
+			updateCurriculumWithCourseTitleAndWriteToFile(curriculum , courseNo, courseTitle , path)
 		}
 	}
+
 }
 
+func updateCurriculumWithCourseTitleAndWriteToFile(curriculum *Curriculum, courseNo string, courseTitle string , outputPath string) error {
+	// Helper function to update course titles in a slice of Course
+	updateCourseTitles := func(courses []Course) {
+		for i, course := range courses {
+			if course.CourseNo == courseNo {
+				courses[i].CourseTitleEng = courseTitle
+			}
+		}
+	}
+
+	// Update course titles in CoreAndMajorGroups
+	for i := range curriculum.CoreAndMajorGroups {
+		updateCourseTitles(curriculum.CoreAndMajorGroups[i].RequiredCourses)
+		updateCourseTitles(curriculum.CoreAndMajorGroups[i].ElectiveCourses)
+	}
+
+	// Update course titles in GeGroups
+	for i := range curriculum.GeGroups {
+		updateCourseTitles(curriculum.GeGroups[i].RequiredCourses)
+		updateCourseTitles(curriculum.GeGroups[i].ElectiveCourses)
+	}
+
+	// Write the updated curriculum back to a file
+	return writeCurriculumToFile(curriculum, outputPath)
+}
+
+func writeCurriculumToFile(curriculum *Curriculum, outputPath string) error {
+	// Convert curriculum to JSON
+	curriculumJSON, err := json.MarshalIndent(curriculum, "", "  ")
+	if err != nil {
+		return fmt.Errorf("error marshaling curriculum to JSON: %v", err)
+	}
+
+	// Write JSON to file
+	err = ioutil.WriteFile(outputPath, curriculumJSON, 0644)
+	if err != nil {
+		return fmt.Errorf("error writing curriculum JSON to file: %v", err)
+	}
+
+	return nil
+}
 
 func getCourseTitlesFromAPI(courseNo string) ([]string, error) {
 	apiURL := fmt.Sprintf("https://mis-api.cmu.ac.th/tqf/v1/course-template?courseid=%s&academicyear=2563&academicterm=1", courseNo)
@@ -140,12 +186,12 @@ func getCourseTitlesFromAPI(courseNo string) ([]string, error) {
 	var courseTitles []string
 	for _, course := range courses {
 		if course.Abbreviation != "" {
-			courseTitles = append(courseTitles, course.Abbreviation)  // if course have abbreviation
+			courseTitles = append(courseTitles, course.Abbreviation) // if the course has an abbreviation
 		} else {
-			courseTitles = append(courseTitles, course.CourseTitleEng) // if course don't have abbreviation then put long name into it
+			courseTitles = append(courseTitles, course.CourseTitleEng) // if the course doesn't have an abbreviation, use the long name
 		}
-		
 	}
-
 	return courseTitles, nil
 }
+
+

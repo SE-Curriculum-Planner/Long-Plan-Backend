@@ -61,9 +61,9 @@ func transformInput(input string) string {
 	return result
 }
 
-func getCourses() {
-	studentID := "640612093"
-	studentFaculty := "Computer Engineering"
+func getCoursesByStudentIDandFaculty(sid string , fname string) {
+	studentID := sid
+	studentFaculty := fname
 	output := transformInput(studentID)
 	fmt.Printf("Student ID : %s \n" , studentID)
 	fmt.Printf("Student curriculum year : %s \n" , output)
