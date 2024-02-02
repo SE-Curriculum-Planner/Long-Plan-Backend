@@ -13,11 +13,11 @@ import (
 )
 
 type enrolledCourse struct {
-	Year         string    	`json:"Year"`
-	Semester     string    	`json:"Semester"`
-	CourseNumber string 	`json:"CourseNumber"`
-	Credit       string 	`json:"Credit"`
-	Grade        string 	`json:"Grade"`
+	Year         string    	`json:"year"`
+	Semester     string    	`json:"semester"`
+	CourseNumber string 	`json:"courseNo"`
+	Credit       string 	`json:"credit"`
+	Grade        string 	`json:"grade"`
 }
 
 func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {

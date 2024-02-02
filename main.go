@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	
+	// getCPEstudentID()
+	// countCPEstudent()
+
 	fetchCPEcurriculumAndMap()
 
 	// getAllCurriculumYear("CPE")
@@ -52,4 +54,11 @@ func fetchCPEcurriculumAndMap() {
 	
 	mapCPEcourseToCMUapi(normal)
 	mapCPEcourseToCMUapi(coop)
+}
+
+func countCPEstudent() {
+	responseNormal := getDataStudentID("data/student-courseEnrolled/CPEStudentID.json")
+	CPEStudent := getNumberStudent(responseNormal)
+	totalMembers := len(CPEStudent)
+	fmt.Println("Number of CPE Student : " , totalMembers)
 }
