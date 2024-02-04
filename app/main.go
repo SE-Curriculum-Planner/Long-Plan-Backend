@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	getMajorByStudentID("640612093")
 	// getCPEstudentID()
 	// countCPEstudent()
 

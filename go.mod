@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/PuerkitoBio/goquery v1.5.1
 	github.com/TylerBrock/colorjson v0.0.0-20200706003622-8a50f05110d2
+	github.com/abadojack/whatlanggo v1.0.1
 	github.com/bytedance/sonic v1.10.2
 	github.com/gofiber/fiber/v2 v2.52.0
 	github.com/golang-jwt/jwt v3.2.2+incompatible

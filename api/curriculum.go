@@ -11,5 +11,4 @@ func bindCurriculumRouter(router fiber.Router) {
 	curriculum := router.Group(CURRICULUM_PREFIX)
 
 	hdl := handler.NewCurriculumHandler()
-
 }
