@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: PGlongplan
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: longplanDB
+      PGDATA: /data/postgres
+      TZ: Asia/Bangkok
+      PGTZ: Asia/Bangkok
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: PGALongplan
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@postgres.com
+      PGADMIN_DEFAULT_PASSWORD: longplanDB
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:

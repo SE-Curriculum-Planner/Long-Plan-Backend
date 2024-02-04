@@ -9,7 +9,7 @@ func main() {
 	// getCPEstudentID()
 	// countCPEstudent()
 
-	fetchCPEcurriculumAndMap()
+	// fetchCPEcurriculumAndMap()
 
 	// getAllCurriculumYear("CPE")
 	// getAllCurriculumYear("ISNE")
