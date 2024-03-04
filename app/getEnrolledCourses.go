@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -78,7 +79,7 @@ func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {
 
 	
 	})
-
+	
 	return courses, nil
 }
 
@@ -96,6 +97,12 @@ func groupCoursesByYearSemester(courses []enrolledCourse) map[string]map[string]
 }
 
 func writeGroupedToFile(groupedCourses map[string]map[string][]enrolledCourse, fileName string) {
+
+	if len(groupedCourses) == 0 {
+        fmt.Println("No data to write. Grouped courses map is empty.")
+        return
+    }
+
 	jsonname := fmt.Sprintf("data/student-courseEnrolled/"+fileName+"-grouped-enrolled.json")
 	file, err := os.Create(jsonname)
 	if err != nil {
@@ -109,6 +116,26 @@ func writeGroupedToFile(groupedCourses map[string]map[string][]enrolledCourse, f
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func encodeGroupedToJSON(groupedCourses map[string]map[string][]enrolledCourse) string {
+    if len(groupedCourses) == 0 {
+        return "Course Not Found"
+    }
+
+    var buffer bytes.Buffer
+    encoder := json.NewEncoder(&buffer)
+    encoder.SetIndent("", "  ") // Set indentation for a pretty format
+    err := encoder.Encode(groupedCourses)
+    if err != nil {
+        return "Error to Encode"
+    }
+
+    // Convert byte slice to string
+    jsonString := buffer.String()
+
+    // Return JSON data as string
+    return jsonString
 }
 
 func writeToFile(courses []enrolledCourse, fileName string) {

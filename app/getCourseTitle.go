@@ -30,13 +30,6 @@ type CourseGroup struct {
 	ElectiveCourses []Course `json:"electiveCourses"`
 }
 
-type GeGroup struct {
-	RequiredCredits int           `json:"requiredCredits"`
-	GroupName       string        `json:"groupName"`
-	RequiredCourses []Course      `json:"requiredCourses"`
-	ElectiveCourses []Course      `json:"electiveCourses"`
-}
-
 type Curriculum struct {
 	CurriculumProgram  string        `json:"curriculumProgram"`
 	Year               int           `json:"year"`
@@ -44,7 +37,7 @@ type Curriculum struct {
 	RequiredCredits    int           `json:"requiredCredits"`
 	FreeElectiveCredits int           `json:"freeElectiveCredits"`
 	CoreAndMajorGroups []CourseGroup `json:"coreAndMajorGroups"`
-	GeGroups           []GeGroup     `json:"geGroups"`
+	GeGroups           []CourseGroup   `json:"geGroups"`
 }
 
 type Response struct {
