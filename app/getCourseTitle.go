@@ -153,7 +153,7 @@ func writeCurriculumToFile(curriculum *Curriculum, outputPath string) error {
 }
 
 func getCourseTitlesFromAPI(courseNo string) ([]string, error) {
-	apiURL := fmt.Sprintf("https://mis-api.cmu.ac.th/tqf/v1/course-template?courseid=%s&academicyear=2563&academicterm=1", courseNo)
+	apiURL := fmt.Sprintf("https://mis-api.cmu.ac.th/tqf/v1/course-template?courseid=%s&academicyear=2567&academicterm=1", courseNo)
 
 	resp, err := http.Get(apiURL)
 	if err != nil {

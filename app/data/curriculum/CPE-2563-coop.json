@@ -410,7 +410,7 @@
         },
         {
           "courseNo": "261408",
-          "courseTitleEng": "",
+          "courseTitleEng": "QUANTUM COMPUTATION",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -419,7 +419,7 @@
         },
         {
           "courseNo": "261409",
-          "courseTitleEng": "",
+          "courseTitleEng": "FUNCTIONAL PROGRAMMING",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -617,7 +617,7 @@
         },
         {
           "courseNo": "261459",
-          "courseTitleEng": "",
+          "courseTitleEng": "DEEP LEARNING",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -824,7 +824,7 @@
         },
         {
           "courseNo": "269433",
-          "courseTitleEng": "",
+          "courseTitleEng": "COM NET ROUTING PROTOCOLS",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -833,7 +833,7 @@
         },
         {
           "courseNo": "269441",
-          "courseTitleEng": "",
+          "courseTitleEng": "INFO RETRIEVAL \u0026 EXTRACTION",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -1276,7 +1276,7 @@
         },
         {
           "courseNo": "701181",
-          "courseTitleEng": "ACCOUNTING FOR NON ACCOUNTANTS",
+          "courseTitleEng": "BASIC ACC FOR ENTREPRENEUR",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
