@@ -30,4 +30,4 @@ COPY --from=builder /app/config /config
 EXPOSE 8000
 
 # Set the command to start your application
-CMD ["/usr/local/bin/backend","/usr/local/bin/backend/app"]
+CMD ["/usr/local/bin/backend"]
