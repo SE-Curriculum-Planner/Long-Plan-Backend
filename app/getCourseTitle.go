@@ -1,4 +1,4 @@
-package main
+package datanaja
 
 import (
 	"encoding/json"
@@ -31,13 +31,13 @@ type CourseGroup struct {
 }
 
 type Curriculum struct {
-	CurriculumProgram  string        `json:"curriculumProgram"`
-	Year               int           `json:"year"`
-	IsCOOPPlan         bool          `json:"isCOOPPlan"`
-	RequiredCredits    int           `json:"requiredCredits"`
-	FreeElectiveCredits int           `json:"freeElectiveCredits"`
-	CoreAndMajorGroups []CourseGroup `json:"coreAndMajorGroups"`
-	GeGroups           []CourseGroup   `json:"geGroups"`
+	CurriculumProgram  string        		`json:"curriculumProgram"`
+	Year               int           		`json:"year"`
+	IsCOOPPlan         bool          		`json:"isCOOPPlan"`
+	RequiredCredits    int           		`json:"requiredCredits"`
+	FreeElectiveCredits int           		`json:"freeElectiveCredits"`
+	CoreAndMajorGroups []CourseGroup 		`json:"coreAndMajorGroups"`
+	GeGroups           []CourseGroup     	`json:"geGroups"`
 }
 
 type Response struct {
@@ -153,7 +153,7 @@ func writeCurriculumToFile(curriculum *Curriculum, outputPath string) error {
 }
 
 func getCourseTitlesFromAPI(courseNo string) ([]string, error) {
-	apiURL := fmt.Sprintf("https://mis-api.cmu.ac.th/tqf/v1/course-template?courseid=%s&academicyear=2567&academicterm=1", courseNo)
+	apiURL := fmt.Sprintf("https://mis-api.cmu.ac.th/tqf/v1/course-template?courseid=%s&academicyear=2563&academicterm=1", courseNo)
 
 	resp, err := http.Get(apiURL)
 	if err != nil {

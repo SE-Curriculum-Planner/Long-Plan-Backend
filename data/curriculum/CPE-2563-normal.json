@@ -23,9 +23,7 @@
           "courseTitleEng": "CALCULUS FOR ENGINEERING 2",
           "recommendSemester": 2,
           "recommendYear": 1,
-          "prerequisites": [
-            "206161"
-          ],
+          "prerequisites": ["206161"],
           "corequisite": null,
           "credits": 3
         },
@@ -34,9 +32,7 @@
           "courseTitleEng": "CALCULUS FOR ENGINEERING 3",
           "recommendSemester": 1,
           "recommendYear": 2,
-          "prerequisites": [
-            "206162"
-          ],
+          "prerequisites": ["206162"],
           "corequisite": null,
           "credits": 3
         },
@@ -54,9 +50,7 @@
           "courseTitleEng": "Physics for Engineering and Agro-Industry Students 2",
           "recommendSemester": 2,
           "recommendYear": 1,
-          "prerequisites": [
-            "207105"
-          ],
+          "prerequisites": ["207105"],
           "corequisite": null,
           "credits": 3
         },
@@ -74,9 +68,7 @@
           "courseTitleEng": "Physics Laboratory for Engineering and Agro-Industry Students 2",
           "recommendSemester": 2,
           "recommendYear": 1,
-          "prerequisites": [
-            "207115"
-          ],
+          "prerequisites": ["207115"],
           "corequisite": null,
           "credits": 1
         },
@@ -112,9 +104,7 @@
           "courseTitleEng": "NUMERICAL COMP FOR ENGR",
           "recommendSemester": 2,
           "recommendYear": 2,
-          "prerequisites": [
-            "206261"
-          ],
+          "prerequisites": ["206261"],
           "corequisite": null,
           "credits": 3
         },
@@ -132,9 +122,7 @@
           "courseTitleEng": "COMP ENGR PROB \u0026 STAT",
           "recommendSemester": 2,
           "recommendYear": 3,
-          "prerequisites": [
-            "206261"
-          ],
+          "prerequisites": ["206261"],
           "corequisite": null,
           "credits": 3
         }
@@ -168,9 +156,7 @@
           "courseTitleEng": "OBJECT-ORIENTED PROGRAMMING",
           "recommendSemester": 2,
           "recommendYear": 2,
-          "prerequisites": [
-            "261102"
-          ],
+          "prerequisites": ["261102"],
           "corequisite": null,
           "credits": 3
         },
@@ -179,9 +165,7 @@
           "courseTitleEng": "BASIC COMP ENGR LAB",
           "recommendSemester": 1,
           "recommendYear": 2,
-          "prerequisites": [
-            "261103"
-          ],
+          "prerequisites": ["261103"],
           "corequisite": null,
           "credits": 2
         },
@@ -190,9 +174,7 @@
           "courseTitleEng": "LOGIC AND DIGITAL CIRCUITS",
           "recommendSemester": 1,
           "recommendYear": 2,
-          "prerequisites": [
-            "207106"
-          ],
+          "prerequisites": ["207106"],
           "corequisite": "261212",
           "credits": 3
         },
@@ -210,10 +192,7 @@
           "courseTitleEng": "MICROPROCESSOR AND INTERFACING",
           "recommendSemester": 2,
           "recommendYear": 2,
-          "prerequisites": [
-            "261210",
-            "252281"
-          ],
+          "prerequisites": ["261210", "252281"],
           "corequisite": "261215",
           "credits": 3
         },
@@ -231,9 +210,7 @@
           "courseTitleEng": "DATA STRUC FOR COMP ENGR",
           "recommendSemester": 1,
           "recommendYear": 2,
-          "prerequisites": [
-            "261102"
-          ],
+          "prerequisites": ["261102"],
           "corequisite": null,
           "credits": 3
         },
@@ -242,10 +219,7 @@
           "courseTitleEng": "ALGOR FOR COMP ENGR",
           "recommendSemester": 2,
           "recommendYear": 2,
-          "prerequisites": [
-            "261217",
-            "261216"
-          ],
+          "prerequisites": ["261217", "261216"],
           "corequisite": null,
           "credits": 3
         },
@@ -254,9 +228,7 @@
           "courseTitleEng": "COMPUTER ARCHITECTURE",
           "recommendSemester": 1,
           "recommendYear": 3,
-          "prerequisites": [
-            "261214"
-          ],
+          "prerequisites": ["261214"],
           "corequisite": null,
           "credits": 3
         },
@@ -265,9 +237,7 @@
           "courseTitleEng": "OPERATING SYSTEMS",
           "recommendSemester": 2,
           "recommendYear": 3,
-          "prerequisites": [
-            "261304"
-          ],
+          "prerequisites": ["261304"],
           "corequisite": null,
           "credits": 3
         },
@@ -276,9 +246,7 @@
           "courseTitleEng": "DATA \u0026 COMP COMMUNICATION",
           "recommendSemester": 2,
           "recommendYear": 2,
-          "prerequisites": [
-            "207106"
-          ],
+          "prerequisites": ["207106"],
           "corequisite": null,
           "credits": 3
         },
@@ -287,9 +255,7 @@
           "courseTitleEng": "COMPUTER NETWORKS",
           "recommendSemester": 1,
           "recommendYear": 3,
-          "prerequisites": [
-            "261332"
-          ],
+          "prerequisites": ["261332"],
           "corequisite": "261336",
           "credits": 3
         },
@@ -307,9 +273,7 @@
           "courseTitleEng": "FUND OF DATABASE SYSTEMS",
           "recommendSemester": 1,
           "recommendYear": 3,
-          "prerequisites": [
-            "261218"
-          ],
+          "prerequisites": ["261218"],
           "corequisite": "261343",
           "credits": 3
         },
@@ -327,9 +291,7 @@
           "courseTitleEng": "SOFTWARE ENGINEERING",
           "recommendSemester": 2,
           "recommendYear": 3,
-          "prerequisites": [
-            "261200"
-          ],
+          "prerequisites": ["261200"],
           "corequisite": null,
           "credits": 3
         },
@@ -338,9 +300,7 @@
           "courseTitleEng": "ADV COMPUTER ENGR TECH",
           "recommendSemester": 2,
           "recommendYear": 4,
-          "prerequisites": [
-            "261361"
-          ],
+          "prerequisites": ["261361"],
           "corequisite": null,
           "credits": 3
         },
@@ -358,9 +318,7 @@
           "courseTitleEng": "PROJECT",
           "recommendSemester": 2,
           "recommendYear": 4,
-          "prerequisites": [
-            "261491"
-          ],
+          "prerequisites": ["261491"],
           "corequisite": null,
           "credits": 3
         }
@@ -410,7 +368,7 @@
         },
         {
           "courseNo": "261408",
-          "courseTitleEng": "",
+          "courseTitleEng": "QUANTUM COMPUTATION",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -419,7 +377,7 @@
         },
         {
           "courseNo": "261409",
-          "courseTitleEng": "",
+          "courseTitleEng": "FUNCTIONAL PROGRAMMING",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -617,7 +575,7 @@
         },
         {
           "courseNo": "261459",
-          "courseTitleEng": "",
+          "courseTitleEng": "DEEP LEARNING",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -824,7 +782,7 @@
         },
         {
           "courseNo": "269433",
-          "courseTitleEng": "",
+          "courseTitleEng": "COM NET ROUTING PROTOCOLS",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -833,7 +791,7 @@
         },
         {
           "courseNo": "269441",
-          "courseTitleEng": "",
+          "courseTitleEng": "INFO RETRIEVAL \u0026 EXTRACTION",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
@@ -880,9 +838,7 @@
           "courseTitleEng": "FUNDAMENTAL ENGLISH 2",
           "recommendSemester": 2,
           "recommendYear": 1,
-          "prerequisites": [
-            "001101"
-          ],
+          "prerequisites": ["001101"],
           "corequisite": null,
           "credits": 3
         },
@@ -891,9 +847,7 @@
           "courseTitleEng": "CRIT READ AND EFFECT WRITE",
           "recommendSemester": 1,
           "recommendYear": 2,
-          "prerequisites": [
-            "001102"
-          ],
+          "prerequisites": ["001102"],
           "corequisite": null,
           "credits": 3
         },
@@ -902,9 +856,7 @@
           "courseTitleEng": "ENGL IN SCIENCE \u0026 TECH CONT",
           "recommendSemester": 2,
           "recommendYear": 2,
-          "prerequisites": [
-            "001102"
-          ],
+          "prerequisites": ["001102"],
           "corequisite": null,
           "credits": 3
         }
@@ -1276,7 +1228,7 @@
         },
         {
           "courseNo": "701181",
-          "courseTitleEng": "ACCOUNTING FOR NON ACCOUNTANTS",
+          "courseTitleEng": "BASIC ACC FOR ENTREPRENEUR",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],
