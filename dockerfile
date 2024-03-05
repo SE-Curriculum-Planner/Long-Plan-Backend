@@ -1,12 +1,33 @@
-FROM golang
+# syntax=docker/dockerfile:1
+FROM golang:1.21 AS builder
 
-RUN mkdir /app
-
-ADD . /app
-
+# Set destination for COPY
 WORKDIR /app
 
-RUN go build -o main ./cmd/server/main.go
+# Download Go modules
+COPY go.mod go.sum ./
+RUN go mod download && go mod verify
 
-EXPOSE 8080
-CMD [ "/app/main" ]
+# Copy the source code. Note the slash at the end, as explained in
+# https://docs.docker.com/engine/reference/builder/#copy
+COPY . .
+
+# Build
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o backend .
+
+FROM alpine:latest
+
+ENV mode prod
+
+# Set the timezone to Asia/Bangkok
+RUN apk update && apk add --no-cache tzdata && cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime && echo "Asia/Bangkok" > /etc/timezone
+
+# Copy the built binary from the previous stage
+COPY --from=builder /app/backend /usr/local/bin/backend
+COPY --from=builder /app/config /config
+
+# Expose the port your application listens on
+EXPOSE 8000
+
+# Set the command to start your application
+CMD ["/usr/local/bin/backend"]

@@ -6,7 +6,6 @@ import (
 
 	"github.com/SE-Curriculum-Planner/Long-Plan-Backend/api"
 	"github.com/SE-Curriculum-Planner/Long-Plan-Backend/config"
-	"github.com/SE-Curriculum-Planner/Long-Plan-Backend/infrastructure"
 	"github.com/SE-Curriculum-Planner/Long-Plan-Backend/pkg/lodash"
 	"github.com/gofiber/fiber/v2"
 )
@@ -17,7 +16,7 @@ func init() {
 	lodash.SetTimeZone("Asia/Bangkok")
 	config.InitConfig()
 	cfg = config.Config.Application
-	infrastructure.InitDB()
+	// infrastructure.InitDB()
 }
 
 func main() {
