@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
@@ -40,10 +41,12 @@ func apiTEST() {
 	
 	// fiber instance
 	app := fiber.New()
+
+	app.Use(cors.New())
    
 	// routes 
 	app.Get("/", func(c *fiber.Ctx) error {
-	 return c.SendString("Hi! welcome to LONGPLAN-API 🌈")
+	 return c.SendString("Hi! welcome to LONGPLAN-API 🌈 \n API Endpoint : \n 1:: /curriculum?major=CPE&year=2563&plan=normal \n 2:: /student/enrolledcourses?studentID={input}")
 	})
 	app.Get("/curriculum", func(c *fiber.Ctx) error {
 		
@@ -102,7 +105,6 @@ func getFilename(major, year, plan string) string {
     // Example: CPE-2023-normal.json
     return strings.ToUpper(major) + "-" + year + "-" + plan + ".json"
 }
-
 
 func mapCPEcourseToCMUapi(path string) {
 	responseNormal := getDataCurriculum(path)
