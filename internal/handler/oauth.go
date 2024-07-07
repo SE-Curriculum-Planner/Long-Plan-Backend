@@ -33,7 +33,7 @@ func (h oauthHandler) SignIn(c *fiber.Ctx) error {
 	claims := jwt.NewWithClaims(jwt.SigningMethodHS256, &oauth.UserClaims{
 		User: *user,
 		RegisteredClaims: jwt.RegisteredClaims{
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(5 * 24 * time.Hour)),
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(1 * 12 * time.Hour)),
 		},
 	})
 
@@ -45,7 +45,7 @@ func (h oauthHandler) SignIn(c *fiber.Ctx) error {
 	cookie := new(fiber.Cookie)
 	cookie.Name = "token"
 	cookie.Value = token
-	cookie.MaxAge = 5 * 24 * 3600
+	cookie.MaxAge = 1 * 12 * 60 * 60
 	cookie.Path = "/"
 	cookie.HTTPOnly = true
 	cookie.SameSite = "lax"

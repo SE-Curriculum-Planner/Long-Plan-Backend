@@ -11,29 +11,29 @@ import (
 )
 
 type ApiResponse struct {
-	TQF2CopyToEbulletinID  string `json:"TQF2CopyToEbulletinID"`
-	AcademicTerm           int    `json:"AcademicTerm"`
-	AcademicYear           string `json:"AcademicYear"`
-	CurriculumCentralCode  string `json:"CurriculumCentralCode"`
-	CurriculumNameEng      string `json:"CurriculumNameEng"`
-	CurriculumNameTha      string `json:"CurriculumNameTha"`
-	DegreeFullEng          string `json:"DegreeFullEng"`
-	DegreeShortEng         string `json:"DegreeShortEng"`
-	DepartmentID           string `json:"DepartmentID"`
-	FacultyID              string `json:"FacultyID"`
-	IsNewCurriculum        bool   `json:"IsNewCurriculum"`
-	StudentLevelID         string `json:"StudentLevelID"`
-	SysCreateDate          string `json:"SysCreateDate"`
-	SysUpdateDate          string `json:"SysUpdateDate"`
-	TQF2BranchID           string `json:"TQF2BranchID"`
-	FacultyBranchNameTha   string `json:"FacultyBranchNameTha"`
-	TQF2CurriculumTypeID   int    `json:"TQF2CurriculumTypeID"`
-	VersionNumber          int    `json:"VersionNumber"`
-	StudentLevelNameTha    string `json:"StudentLevelNameTha"`
-	StudentLevelNameEng    string `json:"StudentLevelNameEng"`
-	IsClose                bool   `json:"IsClose"`
-	CloseTime              string `json:"CloseTime"`
-	CloseDate              string `json:"CloseDate"`
+	TQF2CopyToEbulletinID string `json:"TQF2CopyToEbulletinID"`
+	AcademicTerm          int    `json:"AcademicTerm"`
+	AcademicYear          string `json:"AcademicYear"`
+	CurriculumCentralCode string `json:"CurriculumCentralCode"`
+	CurriculumNameEng     string `json:"CurriculumNameEng"`
+	CurriculumNameTha     string `json:"CurriculumNameTha"`
+	DegreeFullEng         string `json:"DegreeFullEng"`
+	DegreeShortEng        string `json:"DegreeShortEng"`
+	DepartmentID          string `json:"DepartmentID"`
+	FacultyID             string `json:"FacultyID"`
+	IsNewCurriculum       bool   `json:"IsNewCurriculum"`
+	StudentLevelID        string `json:"StudentLevelID"`
+	SysCreateDate         string `json:"SysCreateDate"`
+	SysUpdateDate         string `json:"SysUpdateDate"`
+	TQF2BranchID          string `json:"TQF2BranchID"`
+	FacultyBranchNameTha  string `json:"FacultyBranchNameTha"`
+	TQF2CurriculumTypeID  int    `json:"TQF2CurriculumTypeID"`
+	VersionNumber         int    `json:"VersionNumber"`
+	StudentLevelNameTha   string `json:"StudentLevelNameTha"`
+	StudentLevelNameEng   string `json:"StudentLevelNameEng"`
+	IsClose               bool   `json:"IsClose"`
+	CloseTime             string `json:"CloseTime"`
+	CloseDate             string `json:"CloseDate"`
 }
 
 var curriculum_ID string
@@ -52,7 +52,7 @@ func transformInput(input string) string {
 
 	// Extract the first two digits and concatenate with "25".
 	firstTwoDigits := matches[1]
-	result :=  "25" + firstTwoDigits
+	result := "25" + firstTwoDigits
 
 	// Convert the result to an integer and then back to a string to remove leading zeros.
 	resultInt, _ := strconv.Atoi(result)
@@ -61,21 +61,21 @@ func transformInput(input string) string {
 	return result
 }
 
-func getCoursesByStudentIDandFaculty(sid string , fname string) {
+func getCoursesByStudentIDandFaculty(sid string, fname string) {
 	studentID := sid
 	studentFaculty := fname
 	output := transformInput(studentID)
-	fmt.Printf("Student ID : %s \n" , studentID)
-	fmt.Printf("Student curriculum year : %s \n" , output)
-	fmt.Printf("Student Faculty : %s \n" , studentFaculty)
+	fmt.Printf("Student ID : %s \n", studentID)
+	fmt.Printf("Student curriculum year : %s \n", output)
+	fmt.Printf("Student Faculty : %s \n", studentFaculty)
 	apiURL := fmt.Sprintf("https://mis-api.cmu.ac.th/tqf/v1/tqf2/copy-to-ebulletin/ebulletin-public?studentlevelid=2&facultyid=06&academicYear=%s&acdemicterm=1", output)
 
-    resp, err := http.Get(apiURL)
-    if err != nil {
-        fmt.Println("No response from request")
-    }
-    defer resp.Body.Close()
-    // Check if the request was successful (status code 200)
+	resp, err := http.Get(apiURL)
+	if err != nil {
+		fmt.Println("No response from request")
+	}
+	defer resp.Body.Close()
+	// Check if the request was successful (status code 200)
 	if resp.StatusCode != http.StatusOK {
 		fmt.Println("API request failed with status:", resp.Status)
 		return
@@ -98,7 +98,7 @@ func getCoursesByStudentIDandFaculty(sid string , fname string) {
 		}
 	}
 	curriculum_ID = "https://mis.cmu.ac.th/TQF/TQF2/CurriculumPublic.aspx?EID=" + FID
-	
+
 	courses, err := scraping(curriculum_ID)
 	if err != nil {
 		log.Fatal(err)
@@ -107,6 +107,6 @@ func getCoursesByStudentIDandFaculty(sid string , fname string) {
 	// Print the result
 	for _, course := range courses {
 		fmt.Printf("Course ID: %s\nCourse Code: %s\nCourse Short Code: %s\nCourse Title: %s\nCourse Type : %s\n Credit : %s\n",
-			course.ID, course.CourseCode, course.CourseShortCode, course.CourseTitle , course.CourseType , course.Credit)
+			course.ID, course.CourseCode, course.CourseShortCode, course.CourseTitle, course.CourseType, course.Credit)
 	}
 }

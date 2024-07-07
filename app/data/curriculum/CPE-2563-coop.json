@@ -373,6 +373,33 @@
       "requiredCourses": [],
       "electiveCourses": [
         {
+          "courseNo": "261381",
+          "courseTitleEng": "CYBERSECURITY MANAGEMENT",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261382",
+          "courseTitleEng": "NETWORK SECURITY AND TECHNOLOGICAL CONTROLS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261383",
+          "courseTitleEng": "CYBERSECURITY THREAT ANALYSIS AND DETECTION",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
           "courseNo": "261400",
           "courseTitleEng": "COMPUTER ENGINEERING TRAINING",
           "recommendSemester": 0,
@@ -726,6 +753,24 @@
         {
           "courseNo": "261479",
           "courseTitleEng": "BIOINFORMATICS PROGRAMMING",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261481",
+          "courseTitleEng": "CYBERSECURITY INCIDENT RESPONSE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261482",
+          "courseTitleEng": "CYBERSECURITY AUDIT AND CYBER RESILIENCE",
           "recommendSemester": 0,
           "recommendYear": 0,
           "prerequisites": [],

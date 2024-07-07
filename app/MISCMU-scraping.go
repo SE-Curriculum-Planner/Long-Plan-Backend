@@ -9,12 +9,12 @@ import (
 )
 
 type scrapCourse struct {
-	ID                 string
-	CourseCode         string
-	CourseShortCode    string
-	CourseTitle		   string
-	Credit             string
-	CourseType 		   string
+	ID              string
+	CourseCode      string
+	CourseShortCode string
+	CourseTitle     string
+	Credit          string
+	CourseType      string
 }
 
 func scraping(curriculum_ID string) ([]scrapCourse, error) {
@@ -49,12 +49,10 @@ func scraping(curriculum_ID string) ([]scrapCourse, error) {
 			CourseCode:      courseCode,
 			CourseShortCode: courseShortCode,
 			CourseTitle:     courseTitle,
-			CourseType:      courseType,	
+			CourseType:      courseType,
 			Credit:          courseCredit,
 		})
 	})
 
 	return courses, nil
 }
-
-

@@ -14,37 +14,31 @@ type CourseData struct {
 }
 
 type Course struct {
-	CourseNo           string `json:"courseNo"`
-	CourseTitleEng     string `json:"courseTitleEng"` // Add this line
-	RecommendSemester  int    `json:"recommendSemester"`
-	RecommendYear      int    `json:"recommendYear"`
-	Prerequisites      []string `json:"prerequisites"`
-	Corequisite        *string  `json:"corequisite"`
-	Credits            int      `json:"credits"`
+	CourseNo          string   `json:"courseNo"`
+	CourseTitleEng    string   `json:"courseTitleEng"` // Add this line
+	RecommendSemester int      `json:"recommendSemester"`
+	RecommendYear     int      `json:"recommendYear"`
+	Prerequisites     []string `json:"prerequisites"`
+	Corequisite       *string  `json:"corequisite"`
+	Credits           int      `json:"credits"`
 }
 
 type CourseGroup struct {
-	RequiredCredits int     `json:"requiredCredits"`
-	GroupName       string  `json:"groupName"`
+	RequiredCredits int      `json:"requiredCredits"`
+	GroupName       string   `json:"groupName"`
 	RequiredCourses []Course `json:"requiredCourses"`
 	ElectiveCourses []Course `json:"electiveCourses"`
 }
 
 type Curriculum struct {
-	CurriculumProgram  string        		`json:"curriculumProgram"`
-	Year               int           		`json:"year"`
-	IsCOOPPlan         bool          		`json:"isCOOPPlan"`
-	RequiredCredits    int           		`json:"requiredCredits"`
-	FreeElectiveCredits int           		`json:"freeElectiveCredits"`
-	CoreAndMajorGroups []CourseGroup 		`json:"coreAndMajorGroups"`
-	GeGroups           []CourseGroup     	`json:"geGroups"`
+	CurriculumProgram   string        `json:"curriculumProgram"`
+	Year                int           `json:"year"`
+	IsCOOPPlan          bool          `json:"isCOOPPlan"`
+	RequiredCredits     int           `json:"requiredCredits"`
+	FreeElectiveCredits int           `json:"freeElectiveCredits"`
+	CoreAndMajorGroups  []CourseGroup `json:"coreAndMajorGroups"`
+	GeGroups            []CourseGroup `json:"geGroups"`
 }
-
-type Response struct {
-	Ok         bool       `json:"ok"`
-	Curriculum Curriculum `json:"curriculum"`
-}
-
 
 func getDataCurriculum(path string) Curriculum {
 	jsonFilePath := path
@@ -55,13 +49,15 @@ func getDataCurriculum(path string) Curriculum {
 		fmt.Println("Error reading JSON file:", err)
 	}
 
-	var response Response
+	var response Curriculum
 	err = json.Unmarshal([]byte(jsonData), &response)
 	if err != nil {
 		fmt.Println("Error Unmarshal:", err)
 	}
 
-	return response.Curriculum
+	fmt.Println(response)
+
+	return response
 }
 
 func getCourseNumbersFromCurriculum(curriculum Curriculum) []string {
@@ -90,7 +86,7 @@ func getCourseNumbersFromCourses(courses []Course) []string {
 	return courseNumbers
 }
 
-func getCourseTitle(courseNumbers []string, curriculum *Curriculum , path string) {
+func getCourseTitle(courseNumbers []string, curriculum *Curriculum, path string) {
 	for _, courseNo := range courseNumbers {
 		courseTitles, err := getCourseTitlesFromAPI(courseNo)
 		if err != nil {
@@ -99,18 +95,18 @@ func getCourseTitle(courseNumbers []string, curriculum *Curriculum , path string
 		}
 
 		for _, courseTitle := range courseTitles {
-	
+
 			// Now, you can use the 'apiURL' as needed.
 			fmt.Printf("Course Number: %s, Course Title: %s\n", courseNo, courseTitle)
 			// Update the curriculum with the course title
 
-			updateCurriculumWithCourseTitleAndWriteToFile(curriculum , courseNo, courseTitle , path)
+			updateCurriculumWithCourseTitleAndWriteToFile(curriculum, courseNo, courseTitle, path)
 		}
 	}
 
 }
 
-func updateCurriculumWithCourseTitleAndWriteToFile(curriculum *Curriculum, courseNo string, courseTitle string , outputPath string) error {
+func updateCurriculumWithCourseTitleAndWriteToFile(curriculum *Curriculum, courseNo string, courseTitle string, outputPath string) error {
 	// Helper function to update course titles in a slice of Course
 	updateCourseTitles := func(courses []Course) {
 		for i, course := range courses {
@@ -186,5 +182,3 @@ func getCourseTitlesFromAPI(courseNo string) ([]string, error) {
 	}
 	return courseTitles, nil
 }
-
-

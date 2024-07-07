@@ -11,6 +11,7 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -24,26 +25,37 @@ type enrolledCourse struct {
 }
 
 func getEnrolledCourses(studentID string) ([]enrolledCourse, error) {
+	// Configure custom HTTP transport with TLS settings.
 	transport := &http.Transport{
-		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: false}, // WARNING: InsecureSkipVerify should be false in production.
 	}
-	client := &http.Client{Transport: transport}
 
+	// Create an HTTP client with the custom transport and a timeout.
+	client := &http.Client{
+		Transport: transport,
+		Timeout:   10 * time.Second, // Set a timeout to prevent indefinite hanging.
+	}
+
+	// Construct the URL with the student ID.
 	url := fmt.Sprintf("https://reg.eng.cmu.ac.th/reg/plan_detail/plan_data_term.php?student_id=%s", studentID)
 
-	// Use the custom client to make the request
+	// Use the custom client to make the request.
 	resp, err := client.Get(url)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to get URL: %v", err)
 	}
 	defer resp.Body.Close()
 
-	// Parse the document
-	doc, err := goquery.NewDocumentFromReader(resp.Body)
-	if err != nil {
-		return nil, err
+	// Ensure the response status is OK.
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 	}
 
+	// Parse the document from the response body.
+	doc, err := goquery.NewDocumentFromReader(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse document: %v", err)
+	}
 	var courses []enrolledCourse
 	var year, semester string
 
@@ -106,6 +118,21 @@ func groupCoursesByYearSemester(courses []enrolledCourse) map[string]map[string]
 			groupedCourses[course.Year] = make(map[string][]enrolledCourse)
 		}
 		groupedCourses[course.Year][course.Semester] = append(groupedCourses[course.Year][course.Semester], course)
+	}
+
+	// Ensure at least 4 years of data
+	for year := 1; year <= 4; year++ {
+		yearStr := strconv.Itoa(year)
+		if _, ok := groupedCourses[yearStr]; !ok {
+			groupedCourses[yearStr] = make(map[string][]enrolledCourse)
+		}
+		// Ensure there are two semesters for each year
+		if _, ok := groupedCourses[yearStr]["1"]; !ok {
+			groupedCourses[yearStr]["1"] = []enrolledCourse{}
+		}
+		if _, ok := groupedCourses[yearStr]["2"]; !ok {
+			groupedCourses[yearStr]["2"] = []enrolledCourse{}
+		}
 	}
 
 	return groupedCourses

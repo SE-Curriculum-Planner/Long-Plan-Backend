@@ -1,4 +1,4 @@
-REMOTE_HOST := longplan
+REMOTE_HOST := longplan@10.10.182.135
 APP_NAME := longplan-backend
 
 dbcreate:

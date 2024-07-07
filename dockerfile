@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 FROM golang:1.21 AS builder
 
+
+
 # Set destination for COPY
 WORKDIR /app
 
@@ -20,11 +22,16 @@ FROM alpine:latest
 ENV mode prod
 
 # Set the timezone to Asia/Bangkok
-RUN apk update && apk add --no-cache tzdata && cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime && echo "Asia/Bangkok" > /etc/timezone
+RUN apk update && apk add --no-cache tzdata ca-certificates && \
+    cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime && \
+    echo "Asia/Bangkok" > /etc/timezone && \
+    update-ca-certificates
 
 # Copy the built binary from the previous stage
 COPY --from=builder /app/backend /usr/local/bin/backend
 COPY --from=builder /app/config /config
+
+COPY --from=builder /app/data/curriculum /data/curriculum
 
 # Expose the port your application listens on
 EXPOSE 8000

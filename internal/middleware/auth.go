@@ -33,6 +33,7 @@ func AuthMiddleware() func(*fiber.Ctx) error {
 		user := &parsedAccessToken.Claims.(*oauth.UserClaims).User
 
 		c.Locals("ROLE", user.ItaccounttypeEN)
+		c.Locals("STUDENT_CODE", user.StudentID)
 		return c.Next()
 	}
 }

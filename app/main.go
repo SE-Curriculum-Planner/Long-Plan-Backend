@@ -8,46 +8,49 @@ import (
 	"strings"
 )
 
-// func main() {
-// 	// getCPEstudentID()
-// 	// countCPEstudent()
-
-// 	// getEnrolledCourseByStudentID("640612093")
-
-// 	// apiTEST()
-
-// 	// getEnrolledCourseByStudentID("640612093")
-// 	// fetchCPEcurriculumAndMap()
-
-// 	// getAllCurriculumYear("CPE")
-// 	// getAllCurriculumYear("ISNE")
-
-// 	// getCoursesByStudentIDandFaculty("640612093" , "Computer Engineering")
-
-// 	// getCourses() // old method
-// }
+//func main() {
+//	// getCPEstudentID()
+//	// countCPEstudent()
+//
+//	// getEnrolledCourseByStudentID("640612093")
+//
+//	// apiTEST()
+//
+//	//ISNE_fetch()
+//
+//	mapCPEcourseToCMUapi("data/curriculum/ISNE-2565-normal.json")
+//	// getEnrolledCourseByStudentID("640612093")
+//	// fetchCPEcurriculumAndMap()
+//
+//	// getAllCurriculumYear("CPE")
+//	// getAllCurriculumYear("ISNE")
+//
+//	// getCoursesByStudentIDandFaculty("640612093" , "Computer Engineering")
+//
+//	// getCourses() // old method
+//}
 
 func getAllCurriculumYear(major string) {
 	for i := 58; i <= 67; i++ {
-		year := fmt.Sprintf("25%d",i)
-		getCPEAPI(year,major,"true")
-		getCPEAPI(year,major,"false")
+		year := fmt.Sprintf("25%d", i)
+		getCPEAPI(year, major, "true")
+		getCPEAPI(year, major, "false")
 	}
 }
 
 // func apiTEST() {
-	
+
 // 	// fiber instance
 // 	app := fiber.New()
 
 // 	app.Use(cors.New())
-   
-// 	// routes 
+
+// 	// routes
 // 	app.Get("/", func(c *fiber.Ctx) error {
 // 	 return c.SendString("Hi! welcome to LONGPLAN-API 🌈 \n API Endpoint : \n 1:: /curriculum?major=CPE&year=2563&plan=normal \n 2:: /student/enrolledcourses?studentID={input}")
 // 	})
 // 	app.Get("/curriculum", func(c *fiber.Ctx) error {
-		
+
 // 		major := c.Query("major")
 // 		year := c.Query("year")
 // 		plan := c.Query("plan")
@@ -59,15 +62,15 @@ func getAllCurriculumYear(major string) {
 // 			// Return an error response if unable to read the file
 // 			return c.Status(fiber.StatusInternalServerError).SendString("Error reading JSON file : " + filename)
 // 		}
-	
+
 // 		// Return curriculum data as JSON response
 // 		return c.JSON(jsonFile)
 // 	   })
-	
+
 // 	   app.Get("/student/enrolledcourses", func(c *fiber.Ctx) error {
-		
+
 // 		studentID := c.Query("studentID")
-		
+
 // 		// Return curriculum data as JSON response
 // 		return c.JSON(GetEnrolledCourseByStudentID(studentID))
 // 	   })
@@ -77,39 +80,39 @@ func getAllCurriculumYear(major string) {
 // }
 
 func ReadJSONFile(filePath string) (*Curriculum, error) {
-    // Read the JSON file
-    jsonFile, err := ioutil.ReadFile(filePath)
-    if err != nil {
-        // Return error if unable to read the file
-        return nil, err
-    }
+	// Read the JSON file
+	jsonFile, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		// Return error if unable to read the file
+		return nil, err
+	}
 
-    // Initialize a Curriculum struct to hold the parsed JSON data
-    var curriculum Curriculum
+	// Initialize a Curriculum struct to hold the parsed JSON data
+	var curriculum Curriculum
 
-    // Unmarshal the JSON data into the Curriculum struct
-    err = json.Unmarshal(jsonFile, &curriculum)
-    if err != nil {
-        // Return error if unable to unmarshal JSON
-        return nil, err
-    }
+	// Unmarshal the JSON data into the Curriculum struct
+	err = json.Unmarshal(jsonFile, &curriculum)
+	if err != nil {
+		// Return error if unable to unmarshal JSON
+		return nil, err
+	}
 
-    // Return the parsed Curriculum struct
-    return &curriculum, nil
+	// Return the parsed Curriculum struct
+	return &curriculum, nil
 }
 
 func GetFilename(major, year, plan string) string {
-    // Generate filename based on parameters
-    // Example: CPE-2023-normal.json
-    return strings.ToUpper(major) + "-" + year + "-" + plan + ".json"
+	// Generate filename based on parameters
+	// Example: CPE-2023-normal.json
+	return strings.ToUpper(major) + "-" + year + "-" + plan + ".json"
 }
 
 func mapCPEcourseToCMUapi(path string) {
 	responseNormal := getDataCurriculum(path)
 	courseNumbersNormal := getCourseNumbersFromCurriculum(responseNormal)
 	totalMembers := len(courseNumbersNormal)
-	fmt.Println("Course count : " , totalMembers)
-	getCourseTitle(courseNumbersNormal , &responseNormal , path)
+	fmt.Println("Course count : ", totalMembers)
+	getCourseTitle(courseNumbersNormal, &responseNormal, path)
 }
 
 func GetEnrolledCourseByStudentID(id string) map[string]map[string][]enrolledCourse {
@@ -130,7 +133,7 @@ func fetchCPEcurriculumAndMap() {
 	getAllCurriculumYear("CPE")
 	normal := "data/curriculum/CPE-2563-normal.json"
 	coop := "data/curriculum/CPE-2563-coop.json"
-	
+
 	mapCPEcourseToCMUapi(normal)
 	mapCPEcourseToCMUapi(coop)
 }
@@ -139,5 +142,5 @@ func countCPEstudent() {
 	responseNormal := getDataStudentID("data/student-courseEnrolled/CPEStudentID.json")
 	CPEStudent := getNumberStudent(responseNormal)
 	totalMembers := len(CPEStudent)
-	fmt.Println("Number of CPE Student : " , totalMembers)
+	fmt.Println("Number of CPE Student : ", totalMembers)
 }
