@@ -1,0 +1,1304 @@
+{
+  "curriculumProgram": "ISNE",
+  "year": 2565,
+  "isCOOPPlan": false,
+  "requiredCredits": 143,
+  "freeElectiveCredits": 6,
+  "coreAndMajorGroups": [
+    {
+      "requiredCredits": 24,
+      "groupName": "Core",
+      "requiredCourses": [
+        {
+          "courseNo": "206161",
+          "courseTitleEng": "CALCULUS FOR ENGINEERING 1",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "206162",
+          "courseTitleEng": "CALCULUS FOR ENGINEERING 2",
+          "recommendSemester": 2,
+          "recommendYear": 1,
+          "prerequisites": [
+            "260161"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "255201",
+          "courseTitleEng": "Quantitative Analysis in Industrial Engineering",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261216",
+          "courseTitleEng": "DISCRE MATH FOR COMP ENGR",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269101",
+          "courseTitleEng": "INTRO TO ISNE",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269103",
+          "courseTitleEng": "PROGRAMMING FOR ISNE",
+          "recommendSemester": 2,
+          "recommendYear": 1,
+          "prerequisites": [
+            "269102"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "252281",
+          "courseTitleEng": "FUNDA OF ELEC CIRCUIT FOR ISNE",
+          "recommendSemester": 2,
+          "recommendYear": 2,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "259104",
+          "courseTitleEng": "ENGINEERING DRAWING",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        }
+      ],
+      "electiveCourses": []
+    },
+    {
+      "requiredCredits": 71,
+      "groupName": "Major Required",
+      "requiredCourses": [
+        {
+          "courseNo": "261446",
+          "courseTitleEng": "INFORMATION SYSTEMS",
+          "recommendSemester": 2,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261205"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269105",
+          "courseTitleEng": "ISNE LAB 1",
+          "recommendSemester": 2,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "269201",
+          "courseTitleEng": "ISNE LAB 2",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [
+            "269105"
+          ],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "269370",
+          "courseTitleEng": "PROJ MGMT ISNE",
+          "recommendSemester": 2,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261205"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269470",
+          "courseTitleEng": "IT SERVICE MGMT",
+          "recommendSemester": 2,
+          "recommendYear": 4,
+          "prerequisites": [
+            "269370",
+            "261446"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269200",
+          "courseTitleEng": "WEB PROGRAMMING LANGUAGE",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [
+            "269102"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269340",
+          "courseTitleEng": "DATA CENTRIC APP DEV",
+          "recommendSemester": 1,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261342",
+            "261343"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269360",
+          "courseTitleEng": "PLATFORM PROGRAMMING",
+          "recommendSemester": 2,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261200"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269430",
+          "courseTitleEng": "INFO SYS \u0026 NETWORK TECH",
+          "recommendSemester": 1,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261335"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269491",
+          "courseTitleEng": "PROJECT SURVEY",
+          "recommendSemester": 1,
+          "recommendYear": 4,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "269492",
+          "courseTitleEng": "PROJECT",
+          "recommendSemester": 2,
+          "recommendYear": 4,
+          "prerequisites": [
+            "269491"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261200",
+          "courseTitleEng": "OBJECT-ORIENTED PROGRAMMING",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [
+            "269102"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261205",
+          "courseTitleEng": "DATA STRUCTURES AND ALGORITHMS",
+          "recommendSemester": 2,
+          "recommendYear": 1,
+          "prerequisites": [
+            "269102"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261361",
+          "courseTitleEng": "SOFTWARE ENGINEERING",
+          "recommendSemester": 1,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261200"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269102",
+          "courseTitleEng": "BASIC COMPUTER PROG FOR ISNE",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269202",
+          "courseTitleEng": "ALGO FOR ISNE",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [
+            "261205"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269210",
+          "courseTitleEng": "COM ARCH FOR ISNE",
+          "recommendSemester": 2,
+          "recommendYear": 2,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269462",
+          "courseTitleEng": "INTRO HCI",
+          "recommendSemester": 2,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261361"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261335",
+          "courseTitleEng": "COMPUTER NETWORKS",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [
+            "269130"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261336",
+          "courseTitleEng": "COMPUTER NETWORKS LABORATORY",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [],
+          "corequisite": "261335",
+          "credits": 1
+        },
+        {
+          "courseNo": "261342",
+          "courseTitleEng": "FUND OF DATABASE SYSTEMS",
+          "recommendSemester": 2,
+          "recommendYear": 2,
+          "prerequisites": [
+            "261205"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261343",
+          "courseTitleEng": "DATABASE SYSTEM LABORATORY",
+          "recommendSemester": 2,
+          "recommendYear": 2,
+          "prerequisites": [],
+          "corequisite": "261342",
+          "credits": 1
+        },
+        {
+          "courseNo": "261433",
+          "courseTitleEng": "NETWORK PROGRAMMING",
+          "recommendSemester": 2,
+          "recommendYear": 2,
+          "prerequisites": [
+            "261335"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261434",
+          "courseTitleEng": "COMP NET DESIGN \u0026 MGMT",
+          "recommendSemester": 1,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261335"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261447",
+          "courseTitleEng": "NET AND INFO SECURITY",
+          "recommendSemester": 2,
+          "recommendYear": 3,
+          "prerequisites": [
+            "261335"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269130",
+          "courseTitleEng": "DATA \u0026 COMP COMMU FOR ISNE",
+          "recommendSemester": 2,
+          "recommendYear": 1,
+          "prerequisites": [
+            "269101"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261305",
+          "courseTitleEng": "OPERATING SYSTEMS",
+          "recommendSemester": 1,
+          "recommendYear": 3,
+          "prerequisites": [
+            "269210"
+          ],
+          "corequisite": null,
+          "credits": 3
+        }
+      ],
+      "electiveCourses": []
+    },
+    {
+      "requiredCredits": 12,
+      "groupName": "Major Elective",
+      "requiredCourses": [],
+      "electiveCourses": [
+        {
+          "courseNo": "261381",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261382",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261383",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261408",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261409",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261411",
+          "courseTitleEng": "PARALLEL PROC \u0026 DIST SYS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261430",
+          "courseTitleEng": "WIRELESS NETWORKS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261435",
+          "courseTitleEng": "BROADBAND COMM NET",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261441",
+          "courseTitleEng": "IOT AND BIG DATA",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261444",
+          "courseTitleEng": "ADVANCED DATABASE SYSTEMS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261448",
+          "courseTitleEng": "DATA MINING FOR CPE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261449",
+          "courseTitleEng": "SOFTWARE TESTING FOR CPE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261453",
+          "courseTitleEng": "DIGITAL IMAGE PROCESSING",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261456",
+          "courseTitleEng": "INTRO COMP INTEL FOR CPE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261459",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261461",
+          "courseTitleEng": "VISUAL \u0026 INTERACT PROG",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261465",
+          "courseTitleEng": "COMPUTER GRAPHICS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261468",
+          "courseTitleEng": "SYS ANAL \u0026 DESIGN FOR COMP ENG",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261472",
+          "courseTitleEng": "ROBOTICS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261473",
+          "courseTitleEng": "COMPUTER - AIDED MANUFACTURING",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261475",
+          "courseTitleEng": "MOD \u0026 OPT FOR BIG DATA",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261476",
+          "courseTitleEng": "BIOMEDICAL INSTRUMENTS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261481",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261482",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269341",
+          "courseTitleEng": "DW \u0026 BI FOR ISNE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269400",
+          "courseTitleEng": "INFO SYS \u0026 NETWORK TECH",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269401",
+          "courseTitleEng": "ISNE TRAINING",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269421",
+          "courseTitleEng": "Computer Network Traffic Analysis",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269431",
+          "courseTitleEng": "WIRELESS SENSOR NETWORK",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269432",
+          "courseTitleEng": "PEER-TO-PEER SYSTEMS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269433",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269441",
+          "courseTitleEng": "",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269451",
+          "courseTitleEng": "INTRO TO NEURO-FUZZY SYS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269452",
+          "courseTitleEng": "MOBILE APPLICATION DEVELOPMENT",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269461",
+          "courseTitleEng": "PER SOFT PROC IMPROV",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269471",
+          "courseTitleEng": "ADV PROJ MGMT ISNE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269472",
+          "courseTitleEng": "RISK MGMT IN SOFTWARE PROJ",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269493",
+          "courseTitleEng": "SEMINAR",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269494",
+          "courseTitleEng": "SEL TOPICS IN ISNE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269495",
+          "courseTitleEng": "COOPERATIVE EDUCATION",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 6
+        },
+        {
+          "courseNo": "269496",
+          "courseTitleEng": "SEL TOPICS IN IS 1",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269497",
+          "courseTitleEng": "SEL TOPICS IN IS 2",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269498",
+          "courseTitleEng": "SEL TOPICS IN NET ENGR 1",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "269499",
+          "courseTitleEng": "SEL TOPICS IN NET ENGR 2",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        }
+      ]
+    }
+  ],
+  "geGroups": [
+    {
+      "requiredCredits": 15,
+      "groupName": "Learner Person",
+      "requiredCourses": [
+        {
+          "courseNo": "001101",
+          "courseTitleEng": "FUNDAMENTAL ENGLISH 1",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "001102",
+          "courseTitleEng": "FUNDAMENTAL ENGLISH 2",
+          "recommendSemester": 2,
+          "recommendYear": 1,
+          "prerequisites": [
+            "001101"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "001201",
+          "courseTitleEng": "CRIT READ AND EFFECT WRITE",
+          "recommendSemester": 1,
+          "recommendYear": 2,
+          "prerequisites": [
+            "001102"
+          ],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "001225",
+          "courseTitleEng": "ENGL IN SCIENCE \u0026 TECH CONT",
+          "recommendSemester": 2,
+          "recommendYear": 2,
+          "prerequisites": [
+            "001102"
+          ],
+          "corequisite": null,
+          "credits": 3
+        }
+      ],
+      "electiveCourses": [
+        {
+          "courseNo": "204100",
+          "courseTitleEng": "IT AND MODERN LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "261111",
+          "courseTitleEng": "INTERNET AND ONLINE COMMUNITY",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "953111",
+          "courseTitleEng": "SOFTWARE FOR EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        }
+      ]
+    },
+    {
+      "requiredCredits": 4,
+      "groupName": "Co-Creator",
+      "requiredCourses": [
+        {
+          "courseNo": "259192",
+          "courseTitleEng": "SKILLS FOR PRO \u0026 ENTR",
+          "recommendSemester": 2,
+          "recommendYear": 4,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        }
+      ],
+      "electiveCourses": [
+        {
+          "courseNo": "009103",
+          "courseTitleEng": "INFO LITERACY \u0026 INFO PRESENT",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "154100",
+          "courseTitleEng": "INTRODUCTION TO GEOGRAPHY",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "201100",
+          "courseTitleEng": "INTEGRATED SCIENCE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "203100",
+          "courseTitleEng": "CHEMISTRY IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "211100",
+          "courseTitleEng": "EATING WELL : BET LIV\u0026DIS PRE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "462130",
+          "courseTitleEng": "MEDICATIONS IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "571116",
+          "courseTitleEng": "HEALTH \u0026 WORK IN DIGITAL AGE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "701181",
+          "courseTitleEng": "ACCOUNTING FOR NON ACCOUNTANTS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "702101",
+          "courseTitleEng": "FINANCE FOR DAILY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "705191",
+          "courseTitleEng": "SMART CONSUMER",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "259194",
+          "courseTitleEng": "CHARCS\u0026VAL FOR BEING PRO ENTR",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "109114",
+          "courseTitleEng": "ART IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "127100",
+          "courseTitleEng": "POLITICS IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "128100",
+          "courseTitleEng": "BASIC GG ADMIN",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "154104",
+          "courseTitleEng": "ENVIRONMENTAL CONSERVATION",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "256131",
+          "courseTitleEng": "URBAN MINING",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "259108",
+          "courseTitleEng": "ELECTRICITY IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "259193",
+          "courseTitleEng": "MORAL \u0026 INTEL FOR BEING PRO",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "259195",
+          "courseTitleEng": "MANAGING ACTIVITIES FOR DEV",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "801100",
+          "courseTitleEng": "ARCHITECTURE IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "951100",
+          "courseTitleEng": "MODERN LIFE AND ANIMATION",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        }
+      ]
+    },
+    {
+      "requiredCredits": 4,
+      "groupName": "Active Citizen",
+      "requiredCourses": [
+        {
+          "courseNo": "140104",
+          "courseTitleEng": "CITIZENSHIP",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "259191",
+          "courseTitleEng": "PRIN OF BEING PRO",
+          "recommendSemester": 1,
+          "recommendYear": 1,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        }
+      ],
+      "electiveCourses": []
+    },
+    {
+      "requiredCredits": 7,
+      "groupName": "Elective",
+      "requiredCourses": [],
+      "electiveCourses": [
+        {
+          "courseNo": "011100",
+          "courseTitleEng": "MAN AND PHILOSOPHY",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "109114",
+          "courseTitleEng": "ART IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "127100",
+          "courseTitleEng": "POLITICS IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "128100",
+          "courseTitleEng": "BASIC GG ADMIN",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "154104",
+          "courseTitleEng": "ENVIRONMENTAL CONSERVATION",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "201100",
+          "courseTitleEng": "INTEGRATED SCIENCE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "203100",
+          "courseTitleEng": "CHEMISTRY IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "211100",
+          "courseTitleEng": "EATING WELL : BET LIV\u0026DIS PRE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "254182",
+          "courseTitleEng": "INTRODUCTION TO ENERGY",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "256131",
+          "courseTitleEng": "URBAN MINING",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "259108",
+          "courseTitleEng": "ELECTRICITY IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "259193",
+          "courseTitleEng": "MORAL \u0026 INTEL FOR BEING PRO",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "259194",
+          "courseTitleEng": "CHARCS\u0026VAL FOR BEING PRO ENTR",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "259195",
+          "courseTitleEng": "MANAGING ACTIVITIES FOR DEV",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "462130",
+          "courseTitleEng": "MEDICATIONS IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "571116",
+          "courseTitleEng": "HEALTH \u0026 WORK IN DIGITAL AGE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "602102",
+          "courseTitleEng": "LIFE AND ALTERNATIVE ENERGY",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "701181",
+          "courseTitleEng": "ACCOUNTING FOR NON ACCOUNTANTS",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "702101",
+          "courseTitleEng": "FINANCE FOR DAILY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "705191",
+          "courseTitleEng": "SMART CONSUMER",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 1
+        },
+        {
+          "courseNo": "801100",
+          "courseTitleEng": "ARCHITECTURE IN EVERYDAY LIFE",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        },
+        {
+          "courseNo": "951100",
+          "courseTitleEng": "MODERN LIFE AND ANIMATION",
+          "recommendSemester": 0,
+          "recommendYear": 0,
+          "prerequisites": [],
+          "corequisite": null,
+          "credits": 3
+        }
+      ]
+    }
+  ]
+}
